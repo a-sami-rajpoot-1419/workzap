@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./app.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
@@ -10,7 +10,7 @@ import { Hero } from "./components/Hero";
 import { RolesSection } from "./components/RolesSection";
 import { PricingSection } from "./components/PricingSection";
 import { IndustrySolutions } from "./components/IndustrySolutions";
-import { TestimonialsSection } from "./components/TestimonialsSection";
+import { TestimonialsSection } from "./components/TestimonialSection";
 import { FAQCalendlySection } from "./components/FAQCalendlySection";
 
 // Pages
