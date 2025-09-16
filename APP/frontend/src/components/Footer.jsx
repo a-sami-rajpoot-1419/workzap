@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './ui/button';
-import { Linkedin, Twitter, Youtube, Instagram, Mail } from 'lucide-react';
+import { Linkedin, Facebook, Youtube, Instagram, Mail } from 'lucide-react';
 import { mockData } from '../data/mock';
 
 export const Footer = () => {
@@ -12,10 +12,10 @@ export const Footer = () => {
   };
 
   const socialIcons = [
-    { icon: Linkedin, href: mockData.siteConfig.socials.linkedin, label: 'LinkedIn' },
-    { icon: Twitter, href: mockData.siteConfig.socials.twitter, label: 'Twitter' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/workzap01/', label: 'LinkedIn' },
+    { icon: Facebook, href: mockData.siteConfig.socials.facebook, label: 'Facebook' },
     { icon: Youtube, href: mockData.siteConfig.socials.youtube, label: 'YouTube' },
-    { icon: Instagram, href: mockData.siteConfig.socials.instagram, label: 'Instagram' }
+    { icon: Instagram, href: 'https://www.instagram.com/workzapofficial_/', label: 'Instagram' }
   ];
 
   return (
@@ -30,6 +30,14 @@ export const Footer = () => {
               </div>
               <span className="font-bebas text-2xl text-white">Workzap</span>
             </div>
+              <div className="flex items-center mb-6">
+                <img
+                  src="/logo.png"
+                  alt="Workzap Logo"
+                  className="h-12 w-auto object-contain"
+                  style={{ maxHeight: '3rem' }}
+                />
+              </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Buy back your time with trusted virtual assistants. Fast matching, backup coverage, simple monthly plans.
             </p>
@@ -37,7 +45,6 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div className="md:col-span-1">
-            <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#roles" className="text-gray-400 hover:text-workzap-gold transition-colors duration-200">

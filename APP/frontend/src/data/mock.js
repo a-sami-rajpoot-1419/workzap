@@ -70,26 +70,26 @@ export const mockData = {
       ]
     },
     {
-      slug: "project-management",
-      title: "Project Management",
-      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Project+Management",
-      desc: "Sprints, backlogs, timelines, and delivery—kept predictable.",
-      tags: ["ClickUp", "Asana", "Jira"],
-      fullDesc: "Keep projects on track with dedicated project management support. From planning to delivery, we ensure timelines are met and stakeholders stay informed.",
+      slug: "ai-automation",
+      title: "AI & Automation",
+      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=AI+%26+Automation",
+      desc: "Automate repetitive tasks, streamline workflows, and boost productivity with AI-powered solutions.",
+      tags: ["Zapier", "Make", "OpenAI"],
+      fullDesc: "Empower your business with virtual assistants skilled in AI and automation. Our VAs set up, manage, and optimize automations to save you time and reduce manual work.",
       deliverables: [
-        "Project planning and timeline creation",
-        "Sprint management and tracking",
-        "Stakeholder communication",
-        "Resource allocation optimization",
-        "Progress reporting and analytics"
+        "Workflow automation setup",
+        "AI-powered data entry and reporting",
+        "Integration of business tools",
+        "Routine task automation",
+        "Process optimization and monitoring"
       ],
-      tools: ["ClickUp", "Asana", "Jira", "Monday.com", "Notion"],
+      tools: ["Zapier", "Make", "OpenAI", "Google Apps Script", "IFTTT"],
       workflow: [
-        "Project scope and requirements gathering",
-        "Timeline and milestone planning",
-        "Team coordination and task assignment",
-        "Progress monitoring and reporting",
-        "Delivery and post-project review"
+        "Automation needs assessment",
+        "Tool selection and integration",
+        "Automation build and testing",
+        "Monitoring and optimization",
+        "Ongoing support and updates"
       ]
     },
     {

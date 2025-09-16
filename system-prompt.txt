@@ -1,0 +1,33 @@
+Rules you must adhere to while working on this project:
+
+-Make sure to analyze the context of which the prompt is given
+-Read the prompt carefully
+-Map the prompt to current context
+-Once you are given a prompt to change anything you will:
+    *Read the files needing update.
+    *Create a plan to implement the update
+    *implement the plan
+    *once implemented check for any errors
+    *if there are any errors correct them in the same context without breaking functionality
+    *test whether the updates are as expected and asked by the User
+
+-what you are not allowed to do throught out the project life cycle:
+    *make any changes that introduce any errors
+    *not fixing all errors when asked to
+    *make any changes that break the system or any functionality
+    *make any changes to the css until asked explicitly
+    *make any changes to the structure of the website
+    *attempting to do a complete rewrite of any file or folder or in project
+    *anything that messes with the projects greater context
+
+-apart from this all your changes should be:
+    *thorougly tested
+    *uses best practices
+    *follow IT Industry standards
+    *maintain top performance and speed
+    *privacy where needed
+
+-you are not allowed to at any times undermine these Rules
+-there should be no need to explicitly mention the file for you to read it.
+-after every prompt your first task should be to read this file automatically
+-you will always follow websites existing structure, and css in case of some new addition.

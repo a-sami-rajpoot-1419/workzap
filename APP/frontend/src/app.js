@@ -18,6 +18,7 @@ import { RoleDetailPage } from "./pages/RoleDetailPage";
 import { IndustrySolutionsPage } from "./pages/IndustrySolutionsPage";
 import { CareersPage } from "./pages/CareersPage";
 import { CaseStudyPage } from "./pages/CaseStudyPage";
+import { PricingPage } from "./pages/PricingPage";
 
 const Home = () => {
   return (
@@ -111,6 +112,8 @@ function App() {
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/eor" element={require('./pages/EoRPage.jsx').default()} />
+          <Route path="/pricing" element={<PricingPage />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
-import { Play, Linkedin, Twitter, Youtube, Instagram } from 'lucide-react';
+import { Play, Linkedin, Facebook, Youtube, Instagram } from 'lucide-react';
 import { mockData } from '../data/mock';
 
 export const Hero = () => {
@@ -19,10 +19,10 @@ export const Hero = () => {
   };
 
   const socialIcons = [
-    { icon: Linkedin, href: mockData.siteConfig.socials.linkedin },
-    { icon: Twitter, href: mockData.siteConfig.socials.twitter },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/saadhabib/' },
+    { icon: Facebook, href: mockData.siteConfig.socials.facebook },
     { icon: Youtube, href: mockData.siteConfig.socials.youtube },
-    { icon: Instagram, href: mockData.siteConfig.socials.instagram }
+    { icon: Instagram, href: 'https://www.instagram.com/workzapofficial_/' }
   ];
 
   return (

@@ -19,7 +19,7 @@ export const IndustrySolutionsPage = () => {
   const [playingVideo, setPlayingVideo] = useState(null);
 
   const industries = ['All', 'Advertising', 'SaaS', 'Real Estate', 'E-commerce', 'Coaching', 'Healthcare', 'Finance', 'Legal', 'Non-profit'];
-  const roles = ['All', 'Executive Admin', 'Marketing & Social', 'Customer Support', 'Project Management', 'Bookkeeping', 'Design & Creative'];
+  const roles = ['All', 'Executive Admin', 'Marketing & Social', 'Customer Support', 'AI & Automation', 'Bookkeeping', 'Design & Creative'];
 
   const scrollToFAQ = () => {
     window.location.href = '/#faq-calendly';

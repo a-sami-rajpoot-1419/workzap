@@ -11,113 +11,65 @@ export const PricingSection = () => {
     }
   };
 
-  const getLabel = (index) => {
-    const labels = ["Best for Solo Founders", "Most Popular", "Scaling Teams"];
-    return labels[index];
-  };
+  // Pricing tiles as per image
 
   return (
     <section id="pricing" className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-bebas text-4xl md:text-5xl text-workzap-black mb-6">
-            Simple, Transparent Pricing
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the plan that fits your needs. Scale up or down anytime with no long-term contracts.
-          </p>
+          <h2 className="font-bebas text-4xl md:text-5xl text-workzap-black mb-6">100% Contingent Pricing</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">You only pay when you hire</p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {mockData.pricing.map((plan, index) => (
-            <div
-              key={plan.plan}
-              className={`relative bg-workzap-black border-2 border-workzap-gold shadow-gold hover:shadow-gold-hover transition-all duration-300 rounded-lg overflow-hidden ${
-                plan.popular ? 'transform scale-105' : ''
-              }`}
-            >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div className="absolute top-0 left-0 right-0 bg-workzap-gold text-workzap-black text-center py-2 font-semibold text-sm">
-                  <Star size={16} className="inline mr-1" />
-                  {getLabel(index)}
+          {/* Full Time Subscription */}
+          <div className="relative bg-workzap-black border-2 border-workzap-gold shadow-gold hover:shadow-gold-hover transition-all duration-300 rounded-lg overflow-hidden">
+            <div className="p-8 pt-8">
+              <div className="text-center mb-8">
+                <div className="text-workzap-gold text-sm font-medium mb-2">Subscription</div>
+                <h3 className="font-bebas text-3xl text-white mb-2">Full Time</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-workzap-gold">$16</span>
+                  <span className="text-gray-300 ml-2">per hour</span>
                 </div>
-              )}
-
-              <div className={`p-8 ${plan.popular ? 'pt-16' : 'pt-8'}`}>
-                {/* Plan Header */}
-                <div className="text-center mb-8">
-                  {!plan.popular && (
-                    <div className="text-workzap-gold text-sm font-medium mb-2">
-                      {getLabel(index)}
-                    </div>
-                  )}
-                  
-                  <h3 className="font-bebas text-3xl text-white mb-2">
-                    {plan.plan}
-                  </h3>
-                  
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-workzap-gold">
-                      {plan.price}
-                    </span>
-                    <span className="text-gray-300 ml-2">per month</span>
-                  </div>
-                  
-                  <div className="text-workzap-yellow font-medium text-lg mb-2">
-                    {plan.hours}
-                  </div>
-                  
-                  <p className="text-gray-400 text-sm">
-                    {plan.desc}
-                  </p>
-                </div>
-
-                {/* Features List */}
-                <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start space-x-3">
-                      <Check size={20} className="text-workzap-gold mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm leading-relaxed">
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* CTA Button */}
-                <Button
-                  onClick={scrollToFAQ}
-                  className={`w-full btn-hover transition-smooth ${
-                    plan.popular
-                      ? 'bg-workzap-gold text-workzap-black hover:bg-workzap-yellow'
-                      : 'bg-white text-workzap-black hover:bg-gray-100 border-2 border-workzap-gold'
-                  }`}
-                >
-                  <Phone size={16} className="mr-2" />
-                  Book a Call
-                </Button>
+                <div className="text-workzap-yellow font-medium text-lg mb-2">Starting at</div>
               </div>
+              <Button onClick={scrollToFAQ} className="inline-flex items-center justify-center gap-2 w-full btn-hover transition-smooth bg-white text-workzap-black hover:bg-gray-100 border-2 border-workzap-gold">
+                <Phone size={16} className="mr-2" />Book a Call
+              </Button>
             </div>
-          ))}
-        </div>
-
-        {/* Bottom Microcopy */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 text-sm">
-            Pause or scale anytime. Backup VA included in all plans.
-          </p>
-        </div>
-
-        {/* Section CTA */}
-        <div className="text-center mt-12">
-          <Button
-            onClick={scrollToFAQ}
-            size="lg"
-            className="bg-workzap-black text-white border-2 border-workzap-gold hover:bg-workzap-black-2 focus-gold btn-hover transition-smooth"
-          >
-            Start Your Free Consultation
-          </Button>
+          </div>
+          {/* Part Time Subscription */}
+          <div className="relative bg-workzap-black border-2 border-workzap-gold shadow-gold hover:shadow-gold-hover transition-all duration-300 rounded-lg overflow-hidden transform scale-105">
+            <div className="p-8 pt-8">
+              <div className="text-center mb-8">
+                <div className="text-workzap-gold text-sm font-medium mb-2">Subscription</div>
+                <h3 className="font-bebas text-3xl text-white mb-2">Part Time</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-workzap-gold">$18</span>
+                  <span className="text-gray-300 ml-2">per hour</span>
+                </div>
+                <div className="text-workzap-yellow font-medium text-lg mb-2">Starting at</div>
+              </div>
+              <Button onClick={scrollToFAQ} className="inline-flex items-center justify-center gap-2 w-full btn-hover transition-smooth bg-workzap-gold text-workzap-black hover:bg-workzap-yellow">
+                <Phone size={16} className="mr-2" />Book a Call
+              </Button>
+            </div>
+          </div>
+          {/* Direct Placements - Consultation */}
+          <div className="relative bg-workzap-black border-2 border-workzap-gold shadow-gold hover:shadow-gold-hover transition-all duration-300 rounded-lg overflow-hidden">
+            <div className="p-8 pt-8">
+              <div className="text-center mb-8">
+                <div className="text-workzap-gold text-sm font-medium mb-2">Direct Placements</div>
+                <h3 className="font-bebas text-3xl text-white mb-2">Consultation</h3>
+                <div className="mb-4">
+                  <span className="text-gray-300 ml-2">Speak to an Expert and Get the Pricing!</span>
+                </div>
+              </div>
+              <Button onClick={scrollToFAQ} className="inline-flex items-center justify-center gap-2 w-full btn-hover transition-smooth bg-white text-workzap-black hover:bg-gray-100 border-2 border-workzap-gold">
+                <Phone size={16} className="mr-2" />Book a Call
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -24,11 +24,12 @@ export const Header = () => {
   };
 
   const navItems = [
-    { label: 'Roles', href: '#roles' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'FAQ', href: '#faq-calendly' },
+  { label: 'Roles', href: '#roles' },
+  { label: 'Pricing', href: '#pricing' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Careers', href: '/careers' },
+  { label: 'EoR', href: '/eor' },
+  { label: 'FAQ', href: '#faq-calendly' },
   ];
 
   return (
@@ -39,15 +40,13 @@ export const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-workzap-gold to-workzap-yellow flex items-center justify-center">
-            <span className="text-workzap-black font-bold text-lg">W</span>
-          </div>
-          <span className={`font-bebas text-workzap-black transition-all duration-300 logo ${
-            isScrolled ? 'text-xl' : 'text-2xl'
-          }`}>
-            Workzap
-          </span>
+        <div className="flex items-center">
+          <img
+            src="/logo.png"
+            alt="Workzap Logo"
+            className="h-16 w-auto object-contain"
+            style={{ maxHeight: isScrolled ? '4rem' : '5rem', transition: 'max-height 0.3s' }}
+          />
         </div>
 
         {/* Desktop Navigation */}
@@ -91,7 +90,6 @@ export const Header = () => {
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
