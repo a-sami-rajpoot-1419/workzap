@@ -34,7 +34,7 @@ export const CaseStudyPage = () => {
     solution: "We implemented automated workflows using ClickUp and Slack integrations, with dedicated VAs handling the entire onboarding sequence.",
     results: "Onboarding time reduced from 3 weeks to 5 days, client satisfaction increased dramatically, and the team could focus on strategic work.",
     tools: ["ClickUp", "Slack", "Google Workspace", "Calendly"],
-    roles: ["Executive Admin", "Project Management"],
+  roles: ["Executive Assistant", "Project Management"],
     clientQuote: "Workzap transformed our onboarding process completely. What used to take weeks now happens seamlessly in days."
   };
 

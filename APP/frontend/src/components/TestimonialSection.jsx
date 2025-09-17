@@ -81,26 +81,36 @@ export const TestimonialsSection = () => {
                 </Button>
               </div>
 
-              {/* Video */}
+              {/* Video: Replace placeholder with Steen Rasmussen Testimonial.mp4 for first testimonial only */}
               <div className={`relative ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
-                <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <img
-                    src={testimonial.poster}
-                    alt={`${testimonial.name} testimonial video`}
-                    className="w-full h-full object-cover"
-                  />
-                  
-                  {!playingVideos.has(testimonial.id) && (
-                    <div 
-                      className="video-overlay"
-                      onClick={() => handleVideoPlay(testimonial.id)}
-                    >
-                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-colors duration-300">
-                        <Play size={32} className="text-white ml-1" />
+                {index === 0 ? (
+                  <video
+                    controls
+                    className="aspect-video w-full h-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-100 object-cover"
+                    style={{ objectFit: 'cover' }}
+                  >
+                    <source src={testimonial.videoSrc} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300" style={{ display: 'none' }}>
+                    <img
+                      src={testimonial.poster}
+                      alt={`${testimonial.name} testimonial video`}
+                      className="w-full h-full object-cover"
+                    />
+                    {!playingVideos.has(testimonial.id) && (
+                      <div 
+                        className="video-overlay"
+                        onClick={() => handleVideoPlay(testimonial.id)}
+                      >
+                        <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-colors duration-300">
+                          <Play size={32} className="text-white ml-1" />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}

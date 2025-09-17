@@ -49,7 +49,7 @@ export const PricingPage = () => (
         <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold">
           <h2 className="font-bebas text-2xl mb-2 text-workzap-black">Scale Up with Add-Ons</h2>
           <ul className="list-disc list-inside text-gray-700 text-base mb-2">
-            <li>Specialized VA Skills: Add Marketing, Bookkeeping, Design, or Customer Support (+$2/hr).</li>
+            <li>Specialized VA Skills: Add Marketing, Psychologist, Content & Graphic Associate, or Customer Support (+$2/hr).</li>
             <li>Priority Coverage: Weekend + after-hours support (+$199/mo).</li>
             <li>System Setup Package: Done-for-you setup of ClickUp, HubSpot, or GHL (+$499 one-time).</li>
           </ul>

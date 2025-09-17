@@ -60,7 +60,7 @@ export const CareersPage = () => {
     },
     {
       id: 3,
-      title: 'Marketing & Social Media VA',
+  title: 'Marketing Expert VA',
       department: 'Virtual Assistant',
       location: 'Remote',
       type: 'Full-time',

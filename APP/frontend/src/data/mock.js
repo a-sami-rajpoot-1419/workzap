@@ -1,12 +1,12 @@
 export const mockData = {
   roles: [
     {
-      slug: "executive-admin",
-      title: "Executive Admin",
-      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Executive+Admin",
-      desc: "Delegate executive admin tasks to professionals who work seamlessly with your tools and timezone.",
+  slug: "executive-assistant",
+  title: "Executive Assistant",
+  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Executive+Assistant",
+  desc: "Delegate executive assistant tasks to professionals who work seamlessly with your tools and timezone.",
       tags: ["G Suite", "Slack", "ClickUp"],
-      fullDesc: "Transform your operational efficiency with dedicated executive admin support. Our VAs handle calendar management, email organization, travel coordination, and administrative workflows so you can focus on strategic decisions.",
+  fullDesc: "Transform your operational efficiency with dedicated executive assistant support. Our VAs handle calendar management, email organization, travel coordination, and administrative workflows so you can focus on strategic decisions.",
       deliverables: [
         "Calendar management and scheduling",
         "Email organization and responses", 
@@ -24,9 +24,9 @@ export const mockData = {
       ]
     },
     {
-      slug: "marketing-social",
-      title: "Marketing & Social",
-      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Marketing+%26+Social",
+  slug: "marketing-expert",
+  title: "Marketing Expert",
+  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Marketing+Expert",
       desc: "Content, scheduling, reporting, and asset coordination across your channels.",
       tags: ["Canva", "Meta", "Buffer"],
       fullDesc: "Scale your marketing efforts with dedicated social media and content professionals. From strategy to execution, we handle your entire marketing workflow.",
@@ -70,9 +70,9 @@ export const mockData = {
       ]
     },
     {
-      slug: "ai-automation",
-      title: "AI & Automation",
-      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=AI+%26+Automation",
+  slug: "automation-ai-expert",
+  title: "Automation & AI Expert",
+  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Automation+%26+AI+Expert",
       desc: "Automate repetitive tasks, streamline workflows, and boost productivity with AI-powered solutions.",
       tags: ["Zapier", "Make", "OpenAI"],
       fullDesc: "Empower your business with virtual assistants skilled in AI and automation. Our VAs set up, manage, and optimize automations to save you time and reduce manual work.",
@@ -93,32 +93,32 @@ export const mockData = {
       ]
     },
     {
-      slug: "bookkeeping",
-      title: "Bookkeeping",
-      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Bookkeeping",
-      desc: "Invoices, reconciliations, reports—on schedule, every time.",
+  slug: "psychologist",
+  title: "Psychologist",
+  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Psychologist",
+  desc: "Professional mental health support, counseling, and therapy for individuals and teams.",
       tags: ["QuickBooks", "Xero", "Sheets"],
-      fullDesc: "Maintain accurate financial records with professional bookkeeping services. From daily transactions to monthly reports, keep your finances organized and compliant.",
+  fullDesc: "Empower your team and clients with access to certified psychologists. Our professionals provide confidential counseling, stress management, and mental wellness programs tailored to your needs.",
       deliverables: [
-        "Daily transaction recording",
-        "Invoice creation and tracking",
-        "Bank reconciliation",
-        "Financial report generation",
-        "Tax preparation support"
+        "Individual and group counseling",
+        "Stress and anxiety management",
+        "Mental wellness workshops",
+        "Confidential therapy sessions",
+        "Crisis intervention support"
       ],
-      tools: ["QuickBooks", "Xero", "Google Sheets", "FreshBooks", "Wave"],
+  tools: ["Zoom", "Google Meet", "TherapyNotes", "SimplePractice", "Calendly"],
       workflow: [
-        "Financial system setup and integration",
-        "Daily transaction processing",
-        "Weekly reconciliation reviews",
-        "Monthly financial reporting",
-        "Quarterly financial analysis"
+        "Initial assessment and intake",
+        "Session scheduling and reminders",
+        "Personalized therapy plans",
+        "Progress tracking and feedback",
+        "Ongoing support and follow-up"
       ]
     },
     {
-      slug: "design-creative",
-      title: "Design & Creative",
-      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Design+%26+Creative",
+  slug: "content-graphic-associate",
+  title: "Content & Graphic Associate",
+  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Content+%26+Graphic+Associate",
       desc: "Production design, brand upkeep, and asset management.",
       tags: ["Canva", "Figma", "Adobe"],
       fullDesc: "Elevate your brand with professional design and creative services. From marketing materials to brand guidelines, we ensure consistent visual excellence.",
@@ -190,7 +190,7 @@ export const mockData = {
       outcome: "Cut onboarding time by 60%",
       poster: "https://dummyimage.com/640x360/ffffff/0a0a0a&text=Advertising",
       src: "/media/industry-advertising.mp4",
-      roles: ["marketing-social"],
+  roles: ["marketing-expert"],
       tools: ["Slack", "ClickUp"],
       duration: "02:14"
     },
@@ -200,7 +200,7 @@ export const mockData = {
       outcome: "-40% response time",
       poster: "https://dummyimage.com/640x360/000000/ffd700&text=SaaS",
       src: "/media/industry-saas.mp4",
-      roles: ["executive-admin"],
+  roles: ["executive-assistant"],
       tools: ["Gmail", "Superhuman"],
       duration: "01:31"
     },
@@ -223,7 +223,7 @@ export const mockData = {
       company: "TechStart Inc",
       rating: 5,
       quote: "Workzap transformed our operations. My VA handles everything from scheduling to project coordination, giving me back 15 hours per week.",
-      videoSrc: "/media/testimonial-sarah.mp4",
+  videoSrc: "/Steen Rasmussen Testimonial_2.mp4",
       poster: "https://dummyimage.com/640x360/f5c542/000000&text=Sarah+Chen+Testimonial"
     },
     {
