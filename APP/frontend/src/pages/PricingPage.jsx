@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
+import { scrollToCalendly } from '../lib/scrollToCalendly';
 
 export const PricingPage = () => (
   <section className="bg-white py-20 min-h-screen">
@@ -76,7 +77,7 @@ export const PricingPage = () => (
         <h2 className="font-bebas text-2xl mb-4 text-workzap-black">Next Step: Speak with a Matchmaker</h2>
         <p className="text-lg text-gray-700 mb-6">WorkZap isn’t about filling seats—we’re about finding your perfect match. Book a 15-minute consult, and we’ll introduce you to your next VA.</p>
         <Button
-          onClick={() => window.location.href = '/#faq-calendly'}
+          onClick={scrollToCalendly}
           size="lg"
           className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow border-2 border-workzap-gold btn-hover transition-smooth"
         >

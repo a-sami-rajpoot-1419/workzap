@@ -1,3 +1,4 @@
+// No import of scrollToCalendly
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
@@ -5,6 +6,17 @@ import { Badge } from '../components/ui/badge';
 import { Phone } from 'lucide-react';
 
 const EoRPage = () => {
+  const scrollToFAQ = () => {
+    // If already on home page, smooth scroll; otherwise, navigate to home with hash
+    if (window.location.pathname === '/') {
+      const faqSection = document.getElementById('faq-calendly');
+      if (faqSection) {
+        faqSection.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    window.location.href = '/#faq-calendly';
+  };
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -23,7 +35,7 @@ const EoRPage = () => {
               <span className="text-workzap-black font-medium">520 reviews</span>
               <span className="text-workzap-black font-medium">Trustindex</span>
             </div>
-            <Button className="bg-workzap-black text-white border-2 border-workzap-gold hover:bg-workzap-black-2 w-fit">
+            <Button onClick={scrollToFAQ} className="bg-workzap-black text-white border-2 border-workzap-gold hover:bg-workzap-black-2 w-fit">
               Book A Discovery Call
             </Button>
             <div className="flex items-center gap-2 mt-2">
@@ -154,7 +166,7 @@ const EoRPage = () => {
               <br /><br />
               Workzap streamlines this process, enabling you to hire, onboard, and manage employees in Pakistan quickly and compliantly. We take care of everything from payroll and tax management to benefits administration, so you can focus on growing your business without the administrative burden.
             </p>
-            <Button className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow focus-gold btn-hover transition-smooth mt-6">
+            <Button onClick={scrollToFAQ} className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow focus-gold btn-hover transition-smooth mt-6">
               Book A Discovery Call
             </Button>
           </div>

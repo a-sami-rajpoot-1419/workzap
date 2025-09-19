@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '../components/ui/button';
+import { scrollToCalendly } from '../lib/scrollToCalendly';
 import { Badge } from '../components/ui/badge';
 import { Play, Download, Share2, ArrowLeft, Phone } from 'lucide-react';
 import { Header } from '../components/Header';
@@ -83,7 +84,7 @@ export const CaseStudyPage = () => {
               {/* Side Actions */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  onClick={scrollToFAQ}
+                  onClick={() => window.location.href = '/#faq-calendly'}
                   className="bg-workzap-black text-white border-2 border-workzap-gold hover:bg-workzap-black-2"
                 >
                   <Phone size={16} className="mr-2" />
@@ -230,7 +231,7 @@ export const CaseStudyPage = () => {
 
           <div className="text-center mt-12">
             <Button
-              onClick={scrollToFAQ}
+                  onClick={scrollToCalendly}
               size="lg"
               className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow focus-gold btn-hover transition-smooth"
             >

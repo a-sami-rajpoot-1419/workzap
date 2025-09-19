@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Play, Star, Phone } from 'lucide-react';
 import { mockData } from '../data/mock';
-
 export const TestimonialsSection = () => {
   const [playingVideos, setPlayingVideos] = useState(new Set());
 

@@ -219,8 +219,8 @@ export const mockData = {
   testimonials: [
     {
       id: 1,
-      name: "Sarah Chen",
-      company: "TechStart Inc",
+        name: "Steen Rasmussen",
+        company: "IIH Nordic",
       rating: 5,
       quote: "Workzap transformed our operations. My VA handles everything from scheduling to project coordination, giving me back 15 hours per week.",
   videoSrc: "/Steen Rasmussen Testimonial_2.mp4",

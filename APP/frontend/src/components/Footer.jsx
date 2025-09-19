@@ -30,14 +30,6 @@ export const Footer = () => {
               </div>
               <span className="font-bebas text-2xl text-white">Workzap</span>
             </div>
-              <div className="flex items-center mb-6">
-                <img
-                  src="/logo.png"
-                  alt="Workzap Logo"
-                  className="h-12 w-auto object-contain"
-                  style={{ maxHeight: '3rem' }}
-                />
-              </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Buy back your time with trusted virtual assistants. Fast matching, backup coverage, simple monthly plans.
             </p>

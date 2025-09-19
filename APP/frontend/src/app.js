@@ -21,6 +21,16 @@ import { CaseStudyPage } from "./pages/CaseStudyPage";
 import { PricingPage } from "./pages/PricingPage";
 
 const Home = () => {
+  React.useEffect(() => {
+    if (window.location.hash === '#faq-calendly') {
+      setTimeout(() => {
+        const faqSection = document.getElementById('faq-calendly');
+        if (faqSection) {
+          faqSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
   return (
     <div className="min-h-screen">
       <Header />
