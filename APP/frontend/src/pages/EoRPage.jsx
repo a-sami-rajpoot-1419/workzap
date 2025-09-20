@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { Phone } from 'lucide-react';
+import { Phone, ArrowLeft } from 'lucide-react';
 
 const EoRPage = () => {
   const scrollToFAQ = () => {
@@ -23,6 +23,16 @@ const EoRPage = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="lg:col-span-2">
+            <Button
+              onClick={() => (window.location.href = '/')}
+              variant="outline"
+              className="border-workzap-black text-workzap-black hover:bg-workzap-black hover:text-white mb-6"
+            >
+              <ArrowLeft size={16} className="mr-2" />
+              Back to Home
+            </Button>
+          </div>
           <div className="space-y-6">
             <Badge className="bg-workzap-gold text-workzap-black mb-4">Workzap EoR Service</Badge>
             <h1 className="font-bebas text-4xl md:text-5xl text-workzap-black mb-6">
@@ -43,8 +53,8 @@ const EoRPage = () => {
             </div>
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video">
-            {/* EoR main image placeholder */}
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg">[eor pic]</div>
+            {/* EoR main image - full image (no crop) */}
+            <img src="/EoR1.png" alt="eor pic" className="w-full h-full object-contain" />
           </div>
         </div>
       </section>

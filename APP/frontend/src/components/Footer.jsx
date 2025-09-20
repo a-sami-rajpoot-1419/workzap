@@ -24,12 +24,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
+            <a href="/" aria-label="Go to Workzap home" className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-workzap-gold to-workzap-yellow flex items-center justify-center">
                 <span className="text-workzap-black font-bold text-xl">W</span>
               </div>
               <span className="font-bebas text-2xl text-white">Workzap</span>
-            </div>
+            </a>
             <p className="text-gray-400 text-sm leading-relaxed">
               Buy back your time with trusted virtual assistants. Fast matching, backup coverage, simple monthly plans.
             </p>

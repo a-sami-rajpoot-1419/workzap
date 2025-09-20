@@ -71,6 +71,12 @@ export const PricingSection = () => {
             </div>
           </div>
         </div>
+        {/* Explore Pricing CTA under tiles */}
+        <div className="mt-12 text-center">
+          <Button asChild className="inline-flex items-center justify-center gap-2 btn-hover transition-smooth bg-workzap-gold text-workzap-black hover:bg-workzap-yellow">
+            <a href="/pricing">Explore Pricing</a>
+          </Button>
+        </div>
       </div>
     </section>
   );

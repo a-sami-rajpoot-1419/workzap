@@ -41,12 +41,14 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <img
-            src="/logo.png"
-            alt="Workzap Logo"
-            className="h-16 w-auto object-contain"
-            style={{ maxHeight: isScrolled ? '4rem' : '5rem', transition: 'max-height 0.3s' }}
-          />
+          <a href="/" aria-label="Go to Workzap home">
+            <img
+              src="/logo.png"
+              alt="Workzap Logo"
+              className="h-16 w-auto object-contain"
+              style={{ maxHeight: isScrolled ? '4rem' : '5rem', transition: 'max-height 0.3s' }}
+            />
+          </a>
         </div>
 
         {/* Desktop Navigation */}

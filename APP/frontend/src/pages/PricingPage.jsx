@@ -1,10 +1,35 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
-import { scrollToCalendly } from '../lib/scrollToCalendly';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import { ArrowLeft } from 'lucide-react';
+
+const scrollToFAQ = () => {
+  if (window.location.pathname === '/') {
+    const faqSection = document.getElementById('faq-calendly');
+    if (faqSection) {
+      faqSection.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+  }
+  window.location.href = '/#faq-calendly';
+};
 
 export const PricingPage = () => (
-  <section className="bg-white py-20 min-h-screen">
-    <div className="max-w-7xl mx-auto px-6">
+  <div className="min-h-screen bg-white">
+    <Header />
+    <section className="pt-32 pb-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-8">
+          <Button
+            onClick={() => (window.location.href = '/')}
+            variant="outline"
+            className="border-workzap-black text-workzap-black hover:bg-workzap-black hover:text-white mb-6"
+          >
+            <ArrowLeft size={16} className="mr-2" />
+            Back to Home
+          </Button>
+        </div>
       <div className="text-center mb-12">
         <h1 className="font-bebas text-5xl text-workzap-black mb-4">WorkZap Pricing & Plans</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
@@ -77,13 +102,15 @@ export const PricingPage = () => (
         <h2 className="font-bebas text-2xl mb-4 text-workzap-black">Next Step: Speak with a Matchmaker</h2>
         <p className="text-lg text-gray-700 mb-6">WorkZap isn’t about filling seats—we’re about finding your perfect match. Book a 15-minute consult, and we’ll introduce you to your next VA.</p>
         <Button
-          onClick={scrollToCalendly}
+          onClick={scrollToFAQ}
           size="lg"
           className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow border-2 border-workzap-gold btn-hover transition-smooth"
         >
           Book Your Free Consultation
         </Button>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
+    <Footer />
+  </div>
 );
