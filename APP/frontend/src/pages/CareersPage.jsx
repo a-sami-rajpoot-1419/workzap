@@ -10,9 +10,18 @@ import { StickyCTA } from '../components/StickyCTA';
 export const CareersPage = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [selectedRole, setSelectedRole] = useState(null);
+  const APPLICATION_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdrcym_ByL0ZIxkeFXr4YjJIvErN42MuzFKHaXjl8FkjPQR4Q/viewform?usp=header';
 
   const handleVideoPlay = () => {
     setIsVideoPlaying(true);
+  };
+
+  // Smooth scroll to Open Positions section
+  const scrollToOpenPositions = () => {
+    const el = document.getElementById('open-positions');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   const openRoles = [
@@ -149,6 +158,7 @@ export const CareersPage = () => {
 
               <Button
                 size="lg"
+                onClick={scrollToOpenPositions}
                 className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow focus-gold btn-hover transition-smooth"
               >
                 Apply Now
@@ -212,8 +222,8 @@ export const CareersPage = () => {
         </div>
       </section>
 
-      {/* Open Roles */}
-      <section className="py-20 bg-white">
+  {/* Open Roles */}
+  <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-bebas text-4xl text-workzap-black text-center mb-16">
             Open Positions
@@ -322,6 +332,7 @@ export const CareersPage = () => {
               <div className="mt-8 text-center">
                 <Button
                   size="lg"
+                  onClick={() => window.open(APPLICATION_FORM_URL, '_blank', 'noopener,noreferrer')}
                   className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow"
                 >
                   <ExternalLink size={16} className="mr-2" />

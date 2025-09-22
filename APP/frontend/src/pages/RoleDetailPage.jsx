@@ -11,7 +11,6 @@ import { StickyCTA } from '../components/StickyCTA';
 export const RoleDetailPage = () => {
   const { slug } = useParams();
   const [role, setRole] = useState(null);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
     const foundRole = mockData.roles.find(r => r.slug === slug);
@@ -22,9 +21,7 @@ export const RoleDetailPage = () => {
     window.location.href = '/#faq-calendly';
   };
 
-  const handleVideoPlay = () => {
-    setIsVideoPlaying(true);
-  };
+  // No video in hero; showing image instead
 
   if (!role) {
     return (
@@ -100,25 +97,17 @@ export const RoleDetailPage = () => {
               </Button>
             </div>
 
-            {/* Right Column - Video */}
+            {/* Right Column - Image */}
             <div className="relative">
               <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src={`https://dummyimage.com/800x450/0a0a0a/ffd700&text=${encodeURIComponent(role.title)}+Demo`}
-                  alt={`${role.title} Demo Video`}
+                  src={
+                    role.frontImage ||
+                    `https://dummyimage.com/640x400/ffffff/0a0a0a&text=${encodeURIComponent(role.title)}`
+                  }
+                  alt={`${role.title}`}
                   className="w-full h-full object-cover"
                 />
-                
-                {!isVideoPlaying && (
-                  <div 
-                    className="video-overlay"
-                    onClick={handleVideoPlay}
-                  >
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-colors duration-300">
-                      <Play size={32} className="text-white ml-1" />
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>

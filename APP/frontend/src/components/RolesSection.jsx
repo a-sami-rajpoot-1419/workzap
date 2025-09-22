@@ -71,7 +71,6 @@ export const RolesSection = () => {
                         alt={role.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-black/20"></div>
                     </div>
                     <div className="p-6 bg-white">
                       <h3 className="font-bebas text-2xl text-workzap-black text-center">

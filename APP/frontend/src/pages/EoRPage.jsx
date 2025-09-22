@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { Phone, ArrowLeft } from 'lucide-react';
+import { Phone, ArrowLeft, Umbrella, Gem, UserPlus, LifeBuoy, FileCheck, HeartPulse } from 'lucide-react';
 
 const EoRPage = () => {
   const scrollToFAQ = () => {
@@ -81,32 +81,32 @@ const EoRPage = () => {
           <h2 className="font-bebas text-4xl text-workzap-black text-center mb-16">What We Cover for Clients</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-workzap-black rounded-lg p-8 text-white text-center">
-              <div className="mb-4 text-2xl">[icon]</div>
+              <div className="mb-4 text-2xl flex justify-center"><Umbrella /></div>
               <h3 className="font-bebas text-xl mb-2">Legal employment & labor law compliance</h3>
               <p>We ensure your business adheres to local employment regulations with zero legal hassle.</p>
             </div>
             <div className="bg-workzap-black rounded-lg p-8 text-white text-center">
-              <div className="mb-4 text-2xl">[icon]</div>
+              <div className="mb-4 text-2xl flex justify-center"><Gem /></div>
               <h3 className="font-bebas text-xl mb-2">Payroll & tax management</h3>
               <p>Accurate, timely payroll processing and tax filings handled end-to-end on your behalf.</p>
             </div>
             <div className="bg-workzap-black rounded-lg p-8 text-white text-center">
-              <div className="mb-4 text-2xl">[icon]</div>
+              <div className="mb-4 text-2xl flex justify-center"><FileCheck /></div>
               <h3 className="font-bebas text-xl mb-2">Locally compliant contracts</h3>
               <p>We draft and manage contracts that meet local laws and protect your business interests.</p>
             </div>
             <div className="bg-workzap-black rounded-lg p-8 text-white text-center">
-              <div className="mb-4 text-2xl">[icon]</div>
+              <div className="mb-4 text-2xl flex justify-center"><HeartPulse /></div>
               <h3 className="font-bebas text-xl mb-2">Health & statutory benefits</h3>
               <p>Provide employee benefits, including self and parental health insurance, sick leaves and more.</p>
             </div>
             <div className="bg-workzap-black rounded-lg p-8 text-white text-center">
-              <div className="mb-4 text-2xl">[icon]</div>
+              <div className="mb-4 text-2xl flex justify-center"><UserPlus /></div>
               <h3 className="font-bebas text-xl mb-2">Seamless onboarding & offboarding</h3>
               <p>From the first day to the last, we manage smooth employee transitions globally.</p>
             </div>
             <div className="bg-workzap-black rounded-lg p-8 text-white text-center">
-              <div className="mb-4 text-2xl">[icon]</div>
+              <div className="mb-4 text-2xl flex justify-center"><LifeBuoy /></div>
               <h3 className="font-bebas text-xl mb-2">Ongoing HR support</h3>
               <p>Your team gets continuous HR assistance for queries, policies, and compliance.</p>
             </div>

@@ -95,7 +95,7 @@ export const mockData = {
     {
   slug: "psychologist",
   title: "Psychologist",
-  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Psychologist",
+  frontImage: "/role1.jpeg",
   desc: "Professional mental health support, counseling, and therapy for individuals and teams.",
   tags: ["TherapyNotes", "Therapy Sessions", "HIPAA"],
   fullDesc: "Empower your team and clients with access to certified psychologists. Our professionals provide confidential counseling, stress management, and mental wellness programs tailored to your needs.",

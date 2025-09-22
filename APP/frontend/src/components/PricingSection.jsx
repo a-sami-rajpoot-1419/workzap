@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './ui/button';
-import { Check, Star, Phone } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { mockData } from '../data/mock';
 
 export const PricingSection = () => {
@@ -33,9 +33,28 @@ export const PricingSection = () => {
                 </div>
                 <div className="text-workzap-yellow font-medium text-lg mb-2">Starting at</div>
               </div>
-              <Button onClick={scrollToFAQ} className="inline-flex items-center justify-center gap-2 w-full btn-hover transition-smooth bg-white text-workzap-black hover:bg-gray-100 border-2 border-workzap-gold">
-                <Phone size={16} className="mr-2" />Book a Call
-              </Button>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Dedicated full-time VA (≈160 hrs/month)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Managed payroll, taxes, and EoR compliance</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Senior talent matching and quick onboarding</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Time tracking and monthly performance reviews</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Free replacement guarantee</span>
+                </li>
+              </ul>
             </div>
           </div>
           {/* Part Time Subscription */}
@@ -50,9 +69,28 @@ export const PricingSection = () => {
                 </div>
                 <div className="text-workzap-yellow font-medium text-lg mb-2">Starting at</div>
               </div>
-              <Button onClick={scrollToFAQ} className="inline-flex items-center justify-center gap-2 w-full btn-hover transition-smooth bg-workzap-gold text-workzap-black hover:bg-workzap-yellow">
-                <Phone size={16} className="mr-2" />Book a Call
-              </Button>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Part-time VA (≈80 hrs/month)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Managed payroll, taxes, and EoR compliance</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Senior talent matching and quick onboarding</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Flexible schedules across time zones</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Free replacement guarantee</span>
+                </li>
+              </ul>
             </div>
           </div>
           {/* Direct Placements - Consultation */}
@@ -65,9 +103,28 @@ export const PricingSection = () => {
                   <span className="text-gray-300 ml-2">Speak to an Expert and Get the Pricing!</span>
                 </div>
               </div>
-              <Button onClick={scrollToFAQ} className="inline-flex items-center justify-center gap-2 w-full btn-hover transition-smooth bg-white text-workzap-black hover:bg-gray-100 border-2 border-workzap-gold">
-                <Phone size={16} className="mr-2" />Book a Call
-              </Button>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>One-time placement fee</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Targeted sourcing and deep vetting</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Contract drafting and onboarding support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>90-day replacement guarantee</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="text-workzap-gold mt-0.5" />
+                  <span>Pay only when you hire</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
