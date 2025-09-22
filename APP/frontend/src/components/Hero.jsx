@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from './ui/button';
-import { Play, Linkedin, Facebook, Youtube, Instagram } from 'lucide-react';
+import { Linkedin, Facebook, Youtube, Instagram } from 'lucide-react';
 import { mockData } from '../data/mock';
 
 export const Hero = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
   const scrollToFAQ = () => {
     const faqSection = document.getElementById('faq-calendly');
     if (faqSection) {
       faqSection.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleVideoPlay = () => {
-    setIsVideoPlaying(true);
-    // In a real implementation, you would control the video element
   };
 
   const socialIcons = [
@@ -65,38 +58,17 @@ export const Hero = () => {
               >
                 Book a Call
               </Button>
-              
-              <Button
-                onClick={handleVideoPlay}
-                variant="outline"
-                size="lg"
-                className="border-2 border-workzap-black text-workzap-black hover:bg-workzap-black hover:text-white focus-gold btn-hover transition-smooth"
-              >
-                <Play size={20} className="mr-2" />
-                Watch Intro Video
-              </Button>
             </div>
           </div>
 
-          {/* Right Column - Video */}
+          {/* Right Column - Image */}
           <div className="relative">
             <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
-                src={mockData.siteConfig.founderVideo.poster}
-                alt="Founder Introduction Video"
+                src="/hero.jpg"
+                alt="Hero image"
                 className="w-full h-full object-cover"
               />
-              
-              {!isVideoPlaying && (
-                <div 
-                  className="video-overlay"
-                  onClick={handleVideoPlay}
-                >
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-colors duration-300">
-                    <Play size={32} className="text-white ml-1" />
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>

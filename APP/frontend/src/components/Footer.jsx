@@ -25,9 +25,11 @@ export const Footer = () => {
           {/* Logo and Brand */}
           <div className="md:col-span-1">
             <a href="/" aria-label="Go to Workzap home" className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-workzap-gold to-workzap-yellow flex items-center justify-center">
-                <span className="text-workzap-black font-bold text-xl">W</span>
-              </div>
+              <img
+                src="/Workzap-logo-white.png"
+                alt="Workzap"
+                className="h-10 w-auto object-contain"
+              />
               <span className="font-bebas text-2xl text-white">Workzap</span>
             </a>
             <p className="text-gray-400 text-sm leading-relaxed">

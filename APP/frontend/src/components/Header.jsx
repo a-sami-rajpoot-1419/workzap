@@ -45,8 +45,7 @@ export const Header = () => {
             <img
               src="/logo.png"
               alt="Workzap Logo"
-              className="h-16 w-auto object-contain"
-              style={{ maxHeight: isScrolled ? '4rem' : '5rem', transition: 'max-height 0.3s' }}
+              className={`${isScrolled ? 'h-20' : 'h-24'} w-auto object-contain transition-all duration-300`}
             />
           </a>
         </div>

@@ -54,7 +54,7 @@ const EoRPage = () => {
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video">
             {/* EoR main image - full image (no crop) */}
-            <img src="/EoR1.png" alt="eor pic" className="w-full h-full object-contain" />
+            <img src="/eor1.jpg" alt="eor pic" className="w-full h-full object-contain" />
           </div>
         </div>
       </section>
@@ -63,8 +63,7 @@ const EoRPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video mb-6 lg:mb-0">
-            {/* Compliance image placeholder */}
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg">[ensure compliance with every hire new]</div>
+            <img src="/eor-2.jpg" alt="Ensure compliance" className="w-full h-full object-cover" />
           </div>
           <div>
             <h2 className="font-bebas text-3xl md:text-4xl text-workzap-black mb-6">Ensure Compliance with Every Hire</h2>
@@ -117,17 +116,14 @@ const EoRPage = () => {
       {/* Compliance Details Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-square mb-6 md:mb-0">
-            {/* Legal Compliance image placeholder */}
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg">[legal compliance]</div>
+          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square mb-6 md:mb-0">
+            <img src="/287_1.jpg" alt="Legal compliance" className="w-full h-full object-cover" />
           </div>
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-square mb-6 md:mb-0">
-            {/* Tax Compliance image placeholder */}
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg">[tax compliance.png]</div>
+          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square mb-6 md:mb-0">
+            <img src="/287_2.jpg" alt="Tax compliance" className="w-full h-full object-cover" />
           </div>
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-square">
-            {/* Benefits Disbursement image placeholder */}
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg">[benefits disbursement]</div>
+          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square">
+            <img src="/287_3.jpg" alt="Benefits disbursement" className="w-full h-full object-cover" />
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
@@ -156,8 +152,7 @@ const EoRPage = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video">
-            {/* Ultimate Employee Experience image placeholder */}
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg">[ultimate employee experience]</div>
+            <img src="/eor-3.jpg" alt="Ultimate employee experience" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -166,8 +161,7 @@ const EoRPage = () => {
       <section className="py-20 bg-workzap-black">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video mb-6 lg:mb-0">
-            {/* Employee Globe image placeholder */}
-            <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg">[employee globe]</div>
+            <img src="/eor4.jpg" alt="Hire, pay and manage in Pakistan" className="w-full h-full object-cover" />
           </div>
           <div>
             <h2 className="font-bebas text-3xl md:text-4xl text-white mb-6">Easily Hire, Pay, and Manage Employees in Pakistan with Workzap.</h2>

@@ -3,7 +3,7 @@ export const mockData = {
     {
   slug: "executive-assistant",
   title: "Executive Assistant",
-  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Executive+Assistant",
+  frontImage: "/role6.jpg",
   desc: "Delegate executive assistant tasks to professionals who work seamlessly with your tools and timezone.",
       tags: ["G Suite", "Slack", "ClickUp"],
   fullDesc: "Transform your operational efficiency with dedicated executive assistant support. Our VAs handle calendar management, email organization, travel coordination, and administrative workflows so you can focus on strategic decisions.",
@@ -26,7 +26,7 @@ export const mockData = {
     {
   slug: "marketing-expert",
   title: "Marketing Expert",
-  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Marketing+Expert",
+  frontImage: "/role5.jpg",
       desc: "Content, scheduling, reporting, and asset coordination across your channels.",
       tags: ["Canva", "Meta", "Buffer"],
       fullDesc: "Scale your marketing efforts with dedicated social media and content professionals. From strategy to execution, we handle your entire marketing workflow.",
@@ -49,7 +49,7 @@ export const mockData = {
     {
       slug: "customer-support",
       title: "Customer Support",
-      frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Customer+Support",
+  frontImage: "/role2.jpg",
       desc: "Omnichannel responses, SLAs, and ticket triage with empathy and precision.",
       tags: ["Gorgias", "Zendesk", "HubSpot"],
       fullDesc: "Deliver exceptional customer experiences with 24/7 support coverage. Our team ensures rapid response times and consistent quality across all channels.",
@@ -72,7 +72,7 @@ export const mockData = {
     {
   slug: "automation-ai-expert",
   title: "Automation & AI Expert",
-  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Automation+%26+AI+Expert",
+  frontImage: "/role4.jpg",
       desc: "Automate repetitive tasks, streamline workflows, and boost productivity with AI-powered solutions.",
       tags: ["Zapier", "Make", "OpenAI"],
       fullDesc: "Empower your business with virtual assistants skilled in AI and automation. Our VAs set up, manage, and optimize automations to save you time and reduce manual work.",
@@ -95,7 +95,7 @@ export const mockData = {
     {
   slug: "psychologist",
   title: "Psychologist",
-  frontImage: "/role1.jpeg",
+  frontImage: "/role1.jpg",
   desc: "Professional mental health support, counseling, and therapy for individuals and teams.",
   tags: ["TherapyNotes", "Therapy Sessions", "HIPAA"],
   fullDesc: "Empower your team and clients with access to certified psychologists. Our professionals provide confidential counseling, stress management, and mental wellness programs tailored to your needs.",
@@ -118,7 +118,7 @@ export const mockData = {
     {
   slug: "content-graphic-associate",
   title: "Content & Graphic Associate",
-  frontImage: "https://dummyimage.com/640x400/ffffff/0a0a0a&text=Content+%26+Graphic+Associate",
+  frontImage: "/role3.jpg",
       desc: "Production design, brand upkeep, and asset management.",
       tags: ["Canva", "Figma", "Adobe"],
       fullDesc: "Elevate your brand with professional design and creative services. From marketing materials to brand guidelines, we ensure consistent visual excellence.",

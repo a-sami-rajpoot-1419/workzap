@@ -62,6 +62,16 @@ export const FAQCalendlySection = () => {
 
           {/* Right Column - Calendly */}
           <div className="bg-white rounded-lg p-6 shadow-lg min-h-[740px] flex flex-col">
+            {/* Chat Selection Branding */}
+            <div className="flex items-center justify-center mb-4">
+              <a href="/" aria-label="Go to Workzap home" className="inline-flex items-center">
+                <img
+                  src="/Workzap-logo-white.png"
+                  alt="Workzap"
+                  className="h-6 w-auto object-contain"
+                />
+              </a>
+            </div>
             <div className="text-center mb-6">
               <h3 className="font-bebas text-2xl text-workzap-black mb-2">
                 Still not sure?
