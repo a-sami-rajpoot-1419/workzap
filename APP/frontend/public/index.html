@@ -14,11 +14,11 @@
         <!-- Content Security Policy -->
         <meta http-equiv="Content-Security-Policy" content="
             default-src 'self';
-            script-src 'self' https://calendly.com https://assets.calendly.com https://m.stripe.network 'unsafe-inline' 'unsafe-eval' 'sha256-AHXi4Nw6IxFex4ca6+32BcJSCrlVhLnPRAbcXNQi/U8=' 'sha256-e357n1PxCJ8d03/QCSKaHFmHF1JADyvSHdSfshxM494=' 'sha256-5DA+a07wxWmEka9IdoWjSPVHb17Cp5284/lJzfbl8KA=' 'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls=' chrome-extension:;
+            script-src 'self' https://calendly.com https://assets.calendly.com 'sha256-e357n1PxCJ8d03/QCSKaHFmHF1JADyvSHdSfshxM494=' 'sha256-5DA+a07wxWmEka9IdoWjSPVHb17Cp5284/lJzfbl8KA=' 'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls=' chrome-extension:;
             style-src 'self' https://calendly.com https://assets.calendly.com https://fonts.googleapis.com 'unsafe-inline';
             img-src 'self' data: https: blob:;
             font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com data:;
-            connect-src 'self' https: ws://localhost:3000 ws://localhost:3001 wss://localhost:3000 wss://localhost:3001;
+            connect-src 'self' https: wss:;
             frame-src 'self' https://calendly.com https://assets.calendly.com;
             media-src 'self' data: https: blob:;
             object-src 'none';
