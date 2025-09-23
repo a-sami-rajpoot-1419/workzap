@@ -68,6 +68,7 @@ export const Hero = () => {
                 src="/hero.jpg"
                 alt="Hero image"
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
