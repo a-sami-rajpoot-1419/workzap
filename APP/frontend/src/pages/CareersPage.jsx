@@ -222,8 +222,8 @@ export const CareersPage = () => {
         </div>
       </section>
 
-  {/* Open Roles */}
-  <section id="open-positions" className="py-20 bg-white">
+      {/* Open Roles */}
+      <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-bebas text-4xl text-workzap-black text-center mb-16">
             Open Positions
@@ -275,6 +275,518 @@ export const CareersPage = () => {
             ))}
           </div>
 
+          {/* Add six more positions from main section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            {/* Automation & AI Expert */}
+            <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
+              id: 4,
+              title: 'Automation & AI Expert',
+              department: 'Virtual Assistant',
+              location: 'Remote, Hybrid, Onsite',
+              type: 'Full-time',
+              experience: '1-5 years',
+              description: 'Automate repetitive tasks, streamline workflows, and boost productivity with AI-powered solutions.',
+              requirements: [
+                '1+ years automation experience',
+                'Proficiency in Zapier, Make, or similar tools',
+                'Understanding of AI integration',
+                'Strong problem-solving skills'
+              ],
+              benefits: [
+                'Competitive salary',
+                'Flexible working arrangements',
+                'Professional development opportunities',
+                'Work with cutting-edge technology'
+              ]
+            })}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
+                    Virtual Assistant
+                  </Badge>
+                  <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
+                    Full-time
+                  </Badge>
+                </div>
+                
+                <h3 className="font-semibold text-xl text-workzap-black mb-3">
+                  Automation & AI Expert
+                </h3>
+                
+                <div className="space-y-2 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={14} />
+                    <span>Remote, Hybrid, Onsite</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock size={14} />
+                    <span>1-5 years experience</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                  Automate repetitive tasks, streamline workflows, and boost productivity with AI-powered solutions.
+                </p>
+                
+                <Button 
+                  className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedRole({
+                      id: 4,
+                      title: 'Automation & AI Expert',
+                      department: 'Virtual Assistant',
+                      location: 'Remote, Hybrid, Onsite',
+                      type: 'Full-time',
+                      experience: '1-5 years',
+                      description: 'Automate repetitive tasks, streamline workflows, and boost productivity with AI-powered solutions.',
+                      requirements: [
+                        '1+ years automation experience',
+                        'Proficiency in Zapier, Make, or similar tools',
+                        'Understanding of AI integration',
+                        'Strong problem-solving skills'
+                      ],
+                      benefits: [
+                        'Competitive salary',
+                        'Flexible working arrangements',
+                        'Professional development opportunities',
+                        'Work with cutting-edge technology'
+                      ]
+                    });
+                  }}
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Psychologist */}
+            <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
+              id: 5,
+              title: 'Psychologist',
+              department: 'Virtual Assistant',
+              location: 'Remote, Hybrid, Onsite',
+              type: 'Full-time',
+              experience: '1-5 years',
+              description: 'Professional mental health support, counseling, and therapy for individuals and teams.',
+              requirements: [
+                '1+ years counseling experience',
+                'Licensed psychology degree',
+                'Experience with therapy platforms',
+                'Excellent communication skills'
+              ],
+              benefits: [
+                'Competitive salary',
+                'Flexible working arrangements',
+                'Professional development opportunities',
+                'Work with diverse clients'
+              ]
+            })}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
+                    Virtual Assistant
+                  </Badge>
+                  <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
+                    Full-time
+                  </Badge>
+                </div>
+                
+                <h3 className="font-semibold text-xl text-workzap-black mb-3">
+                  Psychologist
+                </h3>
+                
+                <div className="space-y-2 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={14} />
+                    <span>Remote, Hybrid, Onsite</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock size={14} />
+                    <span>1-5 years experience</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                  Professional mental health support, counseling, and therapy for individuals and teams.
+                </p>
+                
+                <Button 
+                  className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedRole({
+                      id: 5,
+                      title: 'Psychologist',
+                      department: 'Virtual Assistant',
+                      location: 'Remote, Hybrid, Onsite',
+                      type: 'Full-time',
+                      experience: '1-5 years',
+                      description: 'Professional mental health support, counseling, and therapy for individuals and teams.',
+                      requirements: [
+                        '1+ years counseling experience',
+                        'Licensed psychology degree',
+                        'Experience with therapy platforms',
+                        'Excellent communication skills'
+                      ],
+                      benefits: [
+                        'Competitive salary',
+                        'Flexible working arrangements',
+                        'Professional development opportunities',
+                        'Work with diverse clients'
+                      ]
+                    });
+                  }}
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Content & Graphic Associate */}
+            <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
+              id: 6,
+              title: 'Content & Graphic Associate',
+              department: 'Virtual Assistant',
+              location: 'Remote, Hybrid, Onsite',
+              type: 'Full-time',
+              experience: '1-5 years',
+              description: 'Production design, brand upkeep, and asset management for various creative projects.',
+              requirements: [
+                '1+ years design experience',
+                'Proficiency in Canva, Figma, or Adobe',
+                'Creative content creation skills',
+                'Strong attention to detail'
+              ],
+              benefits: [
+                'Competitive salary',
+                'Flexible working arrangements',
+                'Professional development opportunities',
+                'Portfolio building opportunities'
+              ]
+            })}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
+                    Virtual Assistant
+                  </Badge>
+                  <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
+                    Full-time
+                  </Badge>
+                </div>
+                
+                <h3 className="font-semibold text-xl text-workzap-black mb-3">
+                  Content & Graphic Associate
+                </h3>
+                
+                <div className="space-y-2 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={14} />
+                    <span>Remote, Hybrid, Onsite</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock size={14} />
+                    <span>1-5 years experience</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                  Production design, brand upkeep, and asset management for various creative projects.
+                </p>
+                
+                <Button 
+                  className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedRole({
+                      id: 6,
+                      title: 'Content & Graphic Associate',
+                      department: 'Virtual Assistant',
+                      location: 'Remote, Hybrid, Onsite',
+                      type: 'Full-time',
+                      experience: '1-5 years',
+                      description: 'Production design, brand upkeep, and asset management for various creative projects.',
+                      requirements: [
+                        '1+ years design experience',
+                        'Proficiency in Canva, Figma, or Adobe',
+                        'Creative content creation skills',
+                        'Strong attention to detail'
+                      ],
+                      benefits: [
+                        'Competitive salary',
+                        'Flexible working arrangements',
+                        'Professional development opportunities',
+                        'Portfolio building opportunities'
+                      ]
+                    });
+                  }}
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Executive Assistant */}
+            <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
+              id: 7,
+              title: 'Executive Assistant',
+              department: 'Virtual Assistant',
+              location: 'Remote, Hybrid, Onsite',
+              type: 'Full-time',
+              experience: '1-5 years',
+              description: 'Provide executive support including calendar, inbox, travel, meeting prep, and admin workflows.',
+              requirements: [
+                '1+ years executive assistant experience',
+                'Proficiency in Google Workspace and Slack',
+                'Excellent written and verbal communication',
+                'Experience with project management tools'
+              ],
+              benefits: [
+                'Competitive salary',
+                'Flexible working arrangements',
+                'Professional development opportunities',
+                'Work with global clients'
+              ]
+            })}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
+                    Virtual Assistant
+                  </Badge>
+                  <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
+                    Full-time
+                  </Badge>
+                </div>
+                
+                <h3 className="font-semibold text-xl text-workzap-black mb-3">
+                  Executive Assistant
+                </h3>
+                
+                <div className="space-y-2 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={14} />
+                    <span>Remote, Hybrid, Onsite</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock size={14} />
+                    <span>1-5 years experience</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                  Provide executive support including calendar, inbox, travel, meeting prep, and admin workflows.
+                </p>
+                
+                <Button 
+                  className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedRole({
+                      id: 7,
+                      title: 'Executive Assistant',
+                      department: 'Virtual Assistant',
+                      location: 'Remote, Hybrid, Onsite',
+                      type: 'Full-time',
+                      experience: '1-5 years',
+                      description: 'Provide executive support including calendar, inbox, travel, meeting prep, and admin workflows.',
+                      requirements: [
+                        '1+ years executive assistant experience',
+                        'Proficiency in Google Workspace and Slack',
+                        'Excellent written and verbal communication',
+                        'Experience with project management tools'
+                      ],
+                      benefits: [
+                        'Competitive salary',
+                        'Flexible working arrangements',
+                        'Professional development opportunities',
+                        'Work with global clients'
+                      ]
+                    });
+                  }}
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Marketing Expert */}
+            <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
+              id: 8,
+              title: 'Marketing Expert',
+              department: 'Virtual Assistant',
+              location: 'Remote, Hybrid, Onsite',
+              type: 'Full-time',
+              experience: '1-5 years',
+              description: 'Plan and execute social campaigns, create content, and report performance across channels.',
+              requirements: [
+                '1+ years social media marketing experience',
+                'Proficiency in Canva and scheduling tools',
+                'Creative content creation skills',
+                'Understanding of social media trends'
+              ],
+              benefits: [
+                'Competitive salary',
+                'Flexible working arrangements',
+                'Professional development opportunities',
+                'Access to premium tools'
+              ]
+            })}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
+                    Virtual Assistant
+                  </Badge>
+                  <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
+                    Full-time
+                  </Badge>
+                </div>
+                
+                <h3 className="font-semibold text-xl text-workzap-black mb-3">
+                  Marketing Expert
+                </h3>
+                
+                <div className="space-y-2 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={14} />
+                    <span>Remote, Hybrid, Onsite</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock size={14} />
+                    <span>1-5 years experience</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                  Plan and execute social campaigns, create content, and report performance across channels.
+                </p>
+                
+                <Button 
+                  className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedRole({
+                      id: 8,
+                      title: 'Marketing Expert',
+                      department: 'Virtual Assistant',
+                      location: 'Remote, Hybrid, Onsite',
+                      type: 'Full-time',
+                      experience: '1-5 years',
+                      description: 'Plan and execute social campaigns, create content, and report performance across channels.',
+                      requirements: [
+                        '1+ years social media marketing experience',
+                        'Proficiency in Canva and scheduling tools',
+                        'Creative content creation skills',
+                        'Understanding of social media trends'
+                      ],
+                      benefits: [
+                        'Competitive salary',
+                        'Flexible working arrangements',
+                        'Professional development opportunities',
+                        'Access to premium tools'
+                      ]
+                    });
+                  }}
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Customer Support */}
+            <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
+              id: 9,
+              title: 'Customer Support',
+              department: 'Virtual Assistant',
+              location: 'Remote, Hybrid, Onsite',
+              type: 'Full-time',
+              experience: '1-5 years',
+              description: 'Deliver empathetic omnichannel support, manage tickets, and uphold SLAs with consistent quality.',
+              requirements: [
+                '1+ years customer support experience',
+                'Experience with Zendesk or similar platforms',
+                'Strong problem-solving skills',
+                'Excellent English communication'
+              ],
+              benefits: [
+                'Competitive salary',
+                'Flexible working arrangements',
+                'Professional development opportunities',
+                'International client exposure'
+              ]
+            })}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
+                    Virtual Assistant
+                  </Badge>
+                  <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
+                    Full-time
+                  </Badge>
+                </div>
+                
+                <h3 className="font-semibold text-xl text-workzap-black mb-3">
+                  Customer Support
+                </h3>
+                
+                <div className="space-y-2 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={14} />
+                    <span>Remote, Hybrid, Onsite</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock size={14} />
+                    <span>1-5 years experience</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                  Deliver empathetic omnichannel support, manage tickets, and uphold SLAs with consistent quality.
+                </p>
+                
+                <Button 
+                  className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedRole({
+                      id: 9,
+                      title: 'Customer Support',
+                      department: 'Virtual Assistant',
+                      location: 'Remote, Hybrid, Onsite',
+                      type: 'Full-time',
+                      experience: '1-5 years',
+                      description: 'Deliver empathetic omnichannel support, manage tickets, and uphold SLAs with consistent quality.',
+                      requirements: [
+                        '1+ years customer support experience',
+                        'Experience with Zendesk or similar platforms',
+                        'Strong problem-solving skills',
+                        'Excellent English communication'
+                      ],
+                      benefits: [
+                        'Competitive salary',
+                        'Flexible working arrangements',
+                        'Professional development opportunities',
+                        'International client exposure'
+                      ]
+                    });
+                  }}
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Start Your Application Button - Moved from FAQ section */}
+          <div className="text-center mt-16">
+            <Button
+              size="lg"
+              onClick={() => window.open(APPLICATION_FORM_URL, '_blank', 'noopener,noreferrer')}
+              className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow focus-gold btn-hover transition-smooth"
+            >
+              <ExternalLink size={16} className="mr-2" />
+              Start Your Application
+            </Button>
+          </div>
           {/* Role Detail Modal/Section */}
           {selectedRole && (
             <div className="mt-16 bg-gray-50 rounded-lg p-8">
@@ -362,17 +874,6 @@ export const CareersPage = () => {
                 </p>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <Button
-              size="lg"
-              onClick={() => window.open(APPLICATION_FORM_URL, '_blank', 'noopener,noreferrer')}
-              className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow focus-gold btn-hover transition-smooth"
-            >
-              <ExternalLink size={16} className="mr-2" />
-              Start Your Application
-            </Button>
           </div>
         </div>
       </section>
