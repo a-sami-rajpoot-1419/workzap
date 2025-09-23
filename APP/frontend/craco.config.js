@@ -1,4 +1,14 @@
 // Basic CRACO config for Create React App customization
 module.exports = {
-  // Add customizations here if needed in the future
+  devServer: {
+    port: 3000,
+    host: 'localhost',
+    client: {
+      webSocketURL: {
+        port: 3000,
+        hostname: 'localhost',
+        protocol: 'ws'
+      }
+    }
+  }
 };
