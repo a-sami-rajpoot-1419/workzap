@@ -367,8 +367,10 @@ export const CareersPage = () => {
           <div className="text-center mt-16">
             <Button
               size="lg"
+              onClick={() => window.open(APPLICATION_FORM_URL, '_blank', 'noopener,noreferrer')}
               className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow focus-gold btn-hover transition-smooth"
             >
+              <ExternalLink size={16} className="mr-2" />
               Start Your Application
             </Button>
           </div>

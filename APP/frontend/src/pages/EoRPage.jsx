@@ -63,7 +63,7 @@ const EoRPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video mb-6 lg:mb-0">
-            <img src="/eor-2.jpg" alt="Ensure compliance" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/eor-3.jpg" alt="Ensure compliance" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div>
             <h2 className="font-bebas text-3xl md:text-4xl text-workzap-black mb-6">Ensure Compliance with Every Hire</h2>
@@ -152,7 +152,7 @@ const EoRPage = () => {
             </p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video">
-            <img src="/eor-3.jpg" alt="Ultimate employee experience" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/eor4.jpg" alt="Ultimate employee experience" className="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
       </section>
@@ -161,7 +161,7 @@ const EoRPage = () => {
       <section className="py-20 bg-workzap-black">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 flex items-center justify-center aspect-video mb-6 lg:mb-0">
-            <img src="/eor4.jpg" alt="Hire, pay and manage in Pakistan" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/eor-2.jpg" alt="Hire, pay and manage in Pakistan" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div>
             <h2 className="font-bebas text-3xl md:text-4xl text-white mb-6">Easily Hire, Pay, and Manage Employees in Pakistan with Workzap.</h2>
