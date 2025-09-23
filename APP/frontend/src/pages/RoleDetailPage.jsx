@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { Play, CheckCircle, Phone, ArrowLeft } from 'lucide-react';
+import { CheckCircle, Phone, ArrowLeft } from 'lucide-react';
 import { mockData } from '../data/mock';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -203,16 +203,15 @@ export const RoleDetailPage = () => {
 
             <div className="relative">
               <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src={mockData.testimonials[0].poster}
-                  alt="Client testimonial video"
-                  className="w-full h-full object-cover"
-                />
-                <div className="video-overlay">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-colors duration-300">
-                    <Play size={32} className="text-white ml-1" />
-                  </div>
-                </div>
+                {/* Use video element for Steen Rasmussen testimonial - consistent with main page */}
+                <video
+                  controls
+                  className="aspect-video w-full h-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-100 object-cover"
+                  style={{ objectFit: 'cover' }}
+                >
+                  <source src={mockData.testimonials[0].videoSrc} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
