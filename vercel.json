@@ -1,19 +1,13 @@
 {
   "version": 2,
-  "buildCommand": "cd APP/frontend && npm run build",
+  "buildCommand": "cd APP/frontend && npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "APP/frontend/build",
-  "routes": [
+  "installCommand": "cd APP/frontend && npm install --legacy-peer-deps",
+  "framework": null,
+  "rewrites": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|mp4|webp))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
