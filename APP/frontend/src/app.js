@@ -22,14 +22,33 @@ import { PricingPage } from "./pages/PricingPage";
 
 const Home = () => {
   React.useEffect(() => {
-    if (window.location.hash === '#faq-calendly') {
-      setTimeout(() => {
-        const faqSection = document.getElementById('faq-calendly');
-        if (faqSection) {
-          faqSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
+    // Handle scrolling to sections when navigating with hash
+    const handleHashScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const sectionId = hash.substring(1); // Remove the '#'
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+
+    // Handle initial load with hash
+    handleHashScroll();
+
+    // Handle navigation changes with hash
+    const handleHashChange = () => {
+      handleHashScroll();
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
   }, []);
   return (
     <div className="min-h-screen">

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,12 +18,22 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToFAQ = () => {
-    const faqSection = document.getElementById('faq-calendly');
-    if (faqSection) {
-      faqSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionId) => {
+    // If we're on the home page, scroll directly
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on another page, navigate to home with hash
+      navigate(`/#${sectionId}`);
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const scrollToFAQ = () => {
+    scrollToSection('faq-calendly');
   };
 
   const navItems = [
@@ -60,12 +73,10 @@ export const Header = () => {
               onClick={(e) => {
                 e.preventDefault();
                 if (item.href.startsWith('#')) {
-                  const element = document.querySelector(item.href);
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  const sectionId = item.href.substring(1); // Remove the '#'
+                  scrollToSection(sectionId);
                 } else {
-                  window.location.href = item.href;
+                  navigate(item.href);
                 }
               }}
             >
@@ -103,12 +114,10 @@ export const Header = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   if (item.href.startsWith('#')) {
-                    const element = document.querySelector(item.href);
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    const sectionId = item.href.substring(1); // Remove the '#'
+                    scrollToSection(sectionId);
                   } else {
-                    window.location.href = item.href;
+                    navigate(item.href);
                   }
                   setIsMobileMenuOpen(false);
                 }}
