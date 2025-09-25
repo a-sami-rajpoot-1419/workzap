@@ -97,17 +97,13 @@ export const RoleDetailPage = () => {
               </Button>
             </div>
 
-            {/* Right Column - Video (YouTube embed, same as main page) */}
+            {/* Right Column - Role Image (same as main section image) */}
             <div className="relative">
               <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/da29yg0xNW4"
-                  title="Workzap Testimonial"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
+                <img
+                  src={role.frontImage}
+                  alt={role.title}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -203,16 +199,16 @@ export const RoleDetailPage = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-                {/* Use video element for Steen Rasmussen testimonial - consistent with main page */}
-                <video
-                  controls
-                  className="aspect-video w-full h-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-100 object-cover"
-                  style={{ objectFit: 'cover' }}
-                >
-                  <source src={mockData.testimonials[0].videoSrc} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/da29yg0xNW4"
+                  title="Workzap Testimonial"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
               </div>
             </div>
           </div>
