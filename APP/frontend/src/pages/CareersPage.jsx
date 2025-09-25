@@ -2,19 +2,14 @@ import React, { useState } from 'react';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
-import { Play, MapPin, Clock, Users, TrendingUp, ArrowLeft, ExternalLink } from 'lucide-react';
+import { MapPin, Clock, Users, TrendingUp, ArrowLeft, ExternalLink } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { StickyCTA } from '../components/StickyCTA';
 
 export const CareersPage = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [selectedRole, setSelectedRole] = useState(null);
   const APPLICATION_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdrcym_ByL0ZIxkeFXr4YjJIvErN42MuzFKHaXjl8FkjPQR4Q/viewform?usp=header';
-
-  const handleVideoPlay = () => {
-    setIsVideoPlaying(true);
-  };
 
   // Smooth scroll to Open Positions section
   const scrollToOpenPositions = () => {
@@ -24,71 +19,7 @@ export const CareersPage = () => {
     }
   };
 
-  const openRoles = [
-    {
-      id: 1,
-      title: 'Senior Executive Assistant',
-      department: 'Virtual Assistant',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '3-5 years',
-      description: 'Support C-level executives with complex administrative tasks, calendar management, and project coordination.',
-      requirements: [
-        '3+ years executive assistant experience',
-        'Proficiency in Google Workspace and Slack',
-        'Excellent written and verbal communication',
-        'Experience with project management tools'
-      ],
-      benefits: [
-        'Competitive salary',
-        'Flexible working hours',
-        'Professional development opportunities',
-        'Work with global clients'
-      ]
-    },
-    {
-      id: 2,
-      title: 'Customer Support Specialist',
-      department: 'Virtual Assistant',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '2-4 years',
-      description: 'Provide exceptional customer support across multiple channels with focus on SLA compliance and customer satisfaction.',
-      requirements: [
-        '2+ years customer support experience',
-        'Experience with Zendesk or similar platforms',
-        'Strong problem-solving skills',
-        'Excellent English communication'
-      ],
-      benefits: [
-        'Performance-based bonuses',
-        'Career advancement path',
-        'Training and certification programs',
-        'International client exposure'
-      ]
-    },
-    {
-      id: 3,
-  title: 'Marketing Expert VA',
-      department: 'Virtual Assistant',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '2-3 years',
-      description: 'Manage social media accounts, create content, and execute marketing campaigns for growing businesses.',
-      requirements: [
-        '2+ years social media marketing experience',
-        'Proficiency in Canva, Buffer, and analytics tools',
-        'Creative content creation skills',
-        'Understanding of social media trends'
-      ],
-      benefits: [
-        'Creative freedom',
-        'Access to premium tools',
-        'Skills development programs',
-        'Portfolio building opportunities'
-      ]
-    }
-  ];
+  // initial top 3 open roles removed per request
 
   const whyWorkzap = [
     {
@@ -165,26 +96,12 @@ export const CareersPage = () => {
               </Button>
             </div>
 
-            {/* Day in the Life Video */}
+            {/* Hero video placeholder (empty box, no playback yet) */}
             <div className="relative">
-              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src="https://dummyimage.com/800x450/0a0a0a/ffd700&text=Day+in+the+Life+VA+Video"
-                  alt="Day in the Life of a Workzap VA"
-                  className="w-full h-full object-cover"
-                />
-                
-                {!isVideoPlaying && (
-                  <div 
-                    className="video-overlay"
-                    onClick={handleVideoPlay}
-                  >
-                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-colors duration-300">
-                      <Play size={32} className="text-white ml-1" />
-                    </div>
-                  </div>
-                )}
-              </div>
+              <div
+                className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                aria-label="Video placeholder"
+              />
               <p className="text-center text-gray-600 mt-4">Day in the Life: Workzap VA</p>
             </div>
           </div>
@@ -229,51 +146,7 @@ export const CareersPage = () => {
             Open Positions
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {openRoles.map((role) => (
-              <Card key={role.id} className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole(role)}>
-                <CardContent className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
-                      {role.department}
-                    </Badge>
-                    <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
-                      {role.type}
-                    </Badge>
-                  </div>
-                  
-                  <h3 className="font-semibold text-xl text-workzap-black mb-3">
-                    {role.title}
-                  </h3>
-                  
-                  <div className="space-y-2 mb-4 text-sm text-gray-600">
-                    <div className="flex items-center space-x-2">
-                      <MapPin size={14} />
-                      <span>{role.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Clock size={14} />
-                      <span>{role.experience} experience</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-700 text-sm mb-6 leading-relaxed">
-                    {role.description}
-                  </p>
-                  
-                  <Button 
-                    className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedRole(role);
-                    }}
-                  >
-                    View Details
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          {/* Top 3 roles removed */}
 
           {/* Add six more positions from main section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">

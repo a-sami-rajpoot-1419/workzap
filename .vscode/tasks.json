@@ -26,6 +26,50 @@
 				"$tsc"
 			],
 			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
 		}
 	]
 }

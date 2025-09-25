@@ -97,16 +97,17 @@ export const RoleDetailPage = () => {
               </Button>
             </div>
 
-            {/* Right Column - Image */}
+            {/* Right Column - Video (YouTube embed, same as main page) */}
             <div className="relative">
               <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src={
-                    role.frontImage ||
-                    `https://dummyimage.com/640x400/ffffff/0a0a0a&text=${encodeURIComponent(role.title)}`
-                  }
-                  alt={`${role.title}`}
-                  className="w-full h-full object-cover"
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/da29yg0xNW4"
+                  title="Workzap Testimonial"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 />
               </div>
             </div>

@@ -80,17 +80,20 @@ export const TestimonialsSection = () => {
                 </Button>
               </div>
 
-              {/* Video: Replace placeholder with Steen Rasmussen Testimonial.mp4 for first testimonial only */}
+              {/* Video: First testimonial renders YouTube embed */}
               <div className={`relative ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
                 {index === 0 ? (
-                  <video
-                    controls
-                    className="aspect-video w-full h-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-100 object-cover"
-                    style={{ objectFit: 'cover' }}
-                  >
-                    <source src={testimonial.videoSrc} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/da29yg0xNW4"
+                      title="Workzap Testimonial"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
                 ) : (
                   <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300" style={{ display: 'none' }}>
                     <img
