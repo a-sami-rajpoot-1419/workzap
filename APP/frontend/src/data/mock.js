@@ -228,8 +228,8 @@ export const mockData = {
     },
     {
       id: 2, 
-      name: "Marcus Rodriguez",
-      company: "GrowthCo",
+      name: "Dr. Jessica Warnecke",
+      company: "Pace PT",
       rating: 5,
       quote: "The backup VA system is genius. Never missed a beat even when our primary VA was unavailable. Seamless handoffs every time.",
       videoSrc: "/media/testimonial-marcus.mp4",

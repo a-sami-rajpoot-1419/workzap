@@ -80,7 +80,7 @@ export const TestimonialsSection = () => {
                 </Button>
               </div>
 
-              {/* Video: First testimonial renders YouTube embed */}
+              {/* Video: First and second testimonials render YouTube embeds */}
               <div className={`relative ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
                 {index === 0 ? (
                   <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -88,6 +88,18 @@ export const TestimonialsSection = () => {
                       className="w-full h-full"
                       src="https://www.youtube.com/embed/da29yg0xNW4"
                       title="Workzap Testimonial"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                ) : index === 1 ? (
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/IevG2BtePD4"
+                      title="Workzap Testimonial - Dr. Jessica Warnecke"
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"

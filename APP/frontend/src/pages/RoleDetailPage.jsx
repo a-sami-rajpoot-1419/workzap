@@ -158,62 +158,7 @@ export const RoleDetailPage = () => {
         </div>
       </section>
 
-      {/* Related Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-bebas text-4xl text-workzap-black text-center mb-16">
-            What Clients Say About Our {role.title} VAs
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Take the first testimonial as an example */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-semibold text-xl text-workzap-black">
-                  {mockData.testimonials[0].name}
-                </h3>
-                <p className="text-gray-600">{mockData.testimonials[0].company}</p>
-              </div>
-
-              <div className="flex items-center space-x-1">
-                {Array.from({ length: 5 }, (_, i) => (
-                  <CheckCircle
-                    key={i}
-                    size={16}
-                    className="text-workzap-gold"
-                  />
-                ))}
-              </div>
-
-              <blockquote className="text-gray-700 text-lg leading-relaxed italic">
-                "{mockData.testimonials[0].quote}"
-              </blockquote>
-
-              <Button
-                onClick={scrollToFAQ}
-                className="bg-workzap-black text-white border-2 border-workzap-gold hover:bg-workzap-black-2"
-              >
-                <Phone size={16} className="mr-2" />
-                Book a Call
-              </Button>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/da29yg0xNW4"
-                  title="Workzap Testimonial"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Testimonials removed on role pages as requested */}
 
       <Footer />
       <StickyCTA />
