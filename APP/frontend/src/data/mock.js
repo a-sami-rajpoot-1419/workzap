@@ -185,20 +185,52 @@ export const mockData = {
 
   industryVideos: [
     {
-      industry: "Advertising",
-      title: "Agency Onboarding Automation",
-      outcome: "Cut onboarding time by 60%",
-      poster: "https://dummyimage.com/640x360/ffffff/0a0a0a&text=Advertising",
+      industry: "Automation",
+      title: "SheetGrace: Receipts to Tax Automation",
+      outcome: "Receipts → Sheets → Tax returns—one smooth AI workflow.",
+      poster: "/Automation.jpeg",
+      imageOnly: false,
+      // Keep src for potential HTML5 video fallback; primary is YouTube embed
+      src: "",
+      embedUrl: "https://www.youtube.com/embed/nRgmV0wy1rk",
+      roles: ["automation-ai-expert"],
+      tools: [
+        "OpenAI",
+        "CustomGPT",
+        "Make.com",
+        "Google Sheets",
+        "No-Code",
+        "TaxTech"
+      ]
+    },
+    {
+      industry: "Automation",
+      title: "ReceiptSync: Email to Sheets",
+      outcome: "Get your expenses under control with automated tracking and reporting.",
+      poster: "/Automation.jpeg",
+      imageOnly: true,
+      src: "/media/industry-legal.mp4",
+      roles: ["automation-ai-expert"],
+      tools: ["Zapier", "AI Text Extraction", "Gmail", "Outlook", "Google Sheets", "CloudConvert"],
+      
+    },
+    {
+      industry: "Data Pipeline",
+      title: "Data Collection & Scraping",
+      outcome: "Setup automated data pipelines to fuel your growth.",
+      poster: "/Scrapper.jpeg",
+      imageOnly: true,
       src: "/media/industry-advertising.mp4",
   roles: ["marketing-expert"],
-      tools: ["Slack", "ClickUp"],
+      tools: ["Google Sheets", "Web Research Automation", "Results Dashboard"],
       duration: "02:14"
     },
     {
       industry: "SaaS", 
       title: "Inbox to Under 20/Day",
       outcome: "-40% response time",
-      poster: "https://dummyimage.com/640x360/000000/ffd700&text=SaaS",
+      poster: "/Automation.jpeg",
+      imageOnly: true,
       src: "/media/industry-saas.mp4",
   roles: ["executive-assistant"],
       tools: ["Gmail", "Superhuman"],

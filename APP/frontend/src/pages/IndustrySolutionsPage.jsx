@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Input } from '../components/ui/input';
@@ -10,20 +10,29 @@ import { Footer } from '../components/Footer';
 import { StickyCTA } from '../components/StickyCTA';
 
 export const IndustrySolutionsPage = () => {
-  const [filteredVideos, setFilteredVideos] = useState(mockData.industryVideos);
+  // Only keep the same solutions as homepage (exclude the last two)
+  const initialVideos = mockData.industryVideos.slice(0, Math.max(0, mockData.industryVideos.length - 2));
+  const [filteredVideos, setFilteredVideos] = useState(initialVideos);
   const [activeFilters, setActiveFilters] = useState({
     industry: 'all',
     role: 'all',
     search: ''
   });
   const [playingVideo, setPlayingVideo] = useState(null);
+  // Expansion disabled
+  const [expandedSlug, setExpandedSlug] = useState(null);
 
-  const industries = ['All', 'Advertising', 'SaaS', 'Real Estate', 'E-commerce', 'Coaching', 'Healthcare', 'Finance', 'Legal', 'Non-profit'];
+  const getSlug = (title) => title.toLowerCase().replace(/\s+/g, '-');
+
+  // Auto-expand if highlight query is present
+  useEffect(() => {
+    // Remove highlight expansion behavior
+  }, []);
+
+  const industries = ['All', ...Array.from(new Set(initialVideos.map(v => v.industry)))];
   const roles = ['All', 'Executive Assistant', 'Marketing Expert', 'Customer Support', 'Automation & AI Expert', 'Psychologist', 'Content & Graphic Associate'];
 
-  const scrollToFAQ = () => {
-    window.location.href = '/#faq-calendly';
-  };
+  // scrollToFAQ already defined above in this file
 
   const handleFilterChange = (filterType, value) => {
     const newFilters = { ...activeFilters, [filterType]: value };
@@ -32,7 +41,7 @@ export const IndustrySolutionsPage = () => {
   };
 
   const applyFilters = (filters) => {
-    let filtered = [...mockData.industryVideos];
+  let filtered = [...initialVideos];
 
     if (filters.industry !== 'all') {
       filtered = filtered.filter(video => 
@@ -53,11 +62,15 @@ export const IndustrySolutionsPage = () => {
 
   const resetFilters = () => {
     setActiveFilters({ industry: 'all', role: 'all', search: '' });
-    setFilteredVideos(mockData.industryVideos);
+  setFilteredVideos(initialVideos);
   };
 
   const handleVideoPlay = (videoIndex) => {
     setPlayingVideo(videoIndex);
+  };
+
+  const scrollToFAQ = () => {
+    window.location.href = '/#faq-calendly';
   };
 
   return (
@@ -154,18 +167,32 @@ export const IndustrySolutionsPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredVideos.map((video, index) => (
+            {filteredVideos.map((video, index) => {
+              const slug = getSlug(video.title);
+              const isExpanded = false; // expansion disabled
+              return (
               <div
                 key={index}
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 {/* Video Thumbnail */}
                 <div className="relative aspect-video bg-gray-100">
-                  <img
-                    src={video.poster}
-                    alt={video.title}
-                    className="w-full h-full object-cover"
-                  />
+                  {video.embedUrl ? (
+                    <iframe
+                      src={video.embedUrl}
+                      title={video.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  ) : (
+                    <img
+                      src={video.poster}
+                      alt={video.title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                   
                   {/* Industry Tag */}
                   <div className="absolute top-4 left-4">
@@ -174,17 +201,15 @@ export const IndustrySolutionsPage = () => {
                     </Badge>
                   </div>
 
-                  {/* Duration */}
-                  <div className="absolute top-4 right-4 bg-black/60 text-white px-2 py-1 rounded text-xs flex items-center space-x-1">
-                    <Clock size={12} />
-                    <span>{video.duration}</span>
-                  </div>
+                  {/* Duration removed by request */}
 
                   {/* Play Overlay */}
-                  {playingVideo !== index && (
+                  {playingVideo !== index && !video.imageOnly && !video.embedUrl && (
                     <div 
                       className="video-overlay cursor-pointer"
-                      onClick={() => handleVideoPlay(index)}
+                      onClick={() => {
+                        // expansion disabled on listing
+                      }}
                     >
                       <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-colors duration-300">
                         <Play size={24} className="text-white ml-1" />
@@ -219,13 +244,15 @@ export const IndustrySolutionsPage = () => {
                   {/* Actions */}
                   <div className="flex space-x-3">
                     <Button
-                      onClick={() => handleVideoPlay(index)}
+                      onClick={() => {
+                        // Navigate to the same case study page as View Case
+                        window.location.href = `/industry-solutions/${video.industry.toLowerCase()}/${video.title.toLowerCase().replace(/\s+/g, '-')}`;
+                      }}
                       variant="outline"
                       size="sm"
                       className="flex-1 border-workzap-black text-workzap-black hover:bg-workzap-black hover:text-white btn-hover transition-smooth"
                     >
-                      <Play size={14} className="mr-2" />
-                      Watch
+                      Learn More
                     </Button>
                     
                     <Button
@@ -248,8 +275,10 @@ export const IndustrySolutionsPage = () => {
                     </Button>
                   </div>
                 </div>
+
+                {/* Expanded details removed by request */}
               </div>
-            ))}
+            );})}
           </div>
 
           {/* Empty State */}

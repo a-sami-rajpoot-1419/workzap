@@ -80,6 +80,58 @@
 				"$tsc"
 			],
 			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }

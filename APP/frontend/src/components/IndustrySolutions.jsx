@@ -42,18 +42,29 @@ export const IndustrySolutions = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {mockData.industryVideos.map((video, index) => (
+          {mockData.industryVideos.slice(0, Math.max(0, mockData.industryVideos.length - 2)).map((video, index) => (
             <div
               key={index}
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               {/* Video Thumbnail */}
               <div className="relative aspect-video bg-gray-100">
-                <img
-                  src={video.poster}
-                  alt={video.title}
-                  className="w-full h-full object-cover"
-                />
+                {video.embedUrl ? (
+                  <iframe
+                    src={video.embedUrl}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                ) : (
+                  <img
+                    src={video.poster}
+                    alt={video.title}
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 
                 {/* Industry Tag */}
                 <div className="absolute top-4 left-4">
@@ -62,14 +73,10 @@ export const IndustrySolutions = () => {
                   </Badge>
                 </div>
 
-                {/* Duration */}
-                <div className="absolute top-4 right-4 bg-black/60 text-white px-2 py-1 rounded text-xs flex items-center space-x-1">
-                  <Clock size={12} />
-                  <span>{video.duration}</span>
-                </div>
+                {/* Duration removed by request */}
 
                 {/* Play Overlay */}
-                {playingVideo !== index && (
+                {playingVideo !== index && !video.imageOnly && !video.embedUrl && (
                   <div 
                     className="video-overlay cursor-pointer"
                     onClick={() => handleVideoPlay(index)}
@@ -107,13 +114,15 @@ export const IndustrySolutions = () => {
                 {/* Actions */}
                 <div className="flex space-x-3">
                   <Button
-                    onClick={() => handleVideoPlay(index)}
+                    onClick={() => {
+                      const slug = video.title.toLowerCase().replace(/\s+/g, '-');
+                      window.location.href = `/industry-solutions/${video.industry.toLowerCase()}/${slug}`;
+                    }}
                     variant="outline"
                     size="sm"
                     className="flex-1 border-workzap-black text-workzap-black hover:bg-workzap-black hover:text-white btn-hover transition-smooth"
                   >
-                    <Play size={14} className="mr-2" />
-                    Watch
+                    Learn More
                   </Button>
                   
                   <Button
