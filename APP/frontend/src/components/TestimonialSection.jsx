@@ -78,7 +78,7 @@ export const TestimonialsSection = () => {
                   <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/da29yg0xNW4"
+                      src="https://www.youtube-nocookie.com/embed/da29yg0xNW4"
                       title="Workzap Testimonial"
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -90,7 +90,7 @@ export const TestimonialsSection = () => {
                   <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/IevG2BtePD4"
+                      src="https://www.youtube-nocookie.com/embed/IevG2BtePD4"
                       title="Workzap Testimonial - Dr. Jessica Warnecke"
                       loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -99,7 +99,7 @@ export const TestimonialsSection = () => {
                     />
                   </div>
                 ) : (
-                  <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src={testimonial.poster}
                       alt={`${testimonial.name} from ${testimonial.company}`}
