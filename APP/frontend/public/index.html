@@ -31,7 +31,7 @@
         <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="
             default-src 'self';
-            script-src 'self' https://calendly.com https://assets.calendly.com 'sha256-e357n1PxCJ8d03/QCSKaHFmHF1JADyvSHdSfshxM494=' 'sha256-5DA+a07wxWmEka9IdoWjSPVHb17Cp5284/lJzfbl8KA=' 'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls=' chrome-extension:;
+            script-src 'self' https://calendly.com https://assets.calendly.com 'sha256-e357n1PxCJ8d03/QCSKaHFmHF1JADyvSHdSfshxM494=' 'sha256-5DA+a07wxWmEka9IdoWjSPVHb17Cp5284/lJzfbl8KA=' 'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls=' 'sha256-bDK0ztHJOuqw1A90yOtsF+f/hftW3fPrEM+WvbrZ8+U=' chrome-extension:;
             style-src 'self' https://calendly.com https://assets.calendly.com https://fonts.googleapis.com 'unsafe-inline';
             img-src 'self' data: https: blob:;
             font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com data:;
@@ -75,6 +75,29 @@
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "name": "Workzap",
+                "url": "https://workzap.co/",
+                "logo": "https://workzap.co/Workzap-logo-white.png"
+              },
+              {
+                "@type": "WebSite",
+                "name": "Workzap",
+                "url": "https://workzap.co/",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://workzap.co/industry-solutions?search={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+            ]
+          }
+        </script>
         <div id="root"></div>
         <!--
       This HTML file is a template.

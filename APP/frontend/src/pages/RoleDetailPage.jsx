@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -43,6 +44,11 @@ export const RoleDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{`${role.title} — Virtual Assistant Role | Workzap`}</title>
+        <meta name="description" content={role.fullDesc} />
+        <link rel="canonical" href={`https://workzap.co/roles/${role.slug}`} />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

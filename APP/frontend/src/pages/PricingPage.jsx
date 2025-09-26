@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '../components/ui/button';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -17,6 +18,11 @@ const scrollToFAQ = () => {
 
 export const PricingPage = () => (
   <div className="min-h-screen bg-white">
+    <Helmet>
+      <title>Pricing & Plans — Workzap Virtual Assistants</title>
+      <meta name="description" content="Simple, flexible pricing for premium virtual assistants. Lock your rate, scale up or down, and pay $0 until you hire." />
+      <link rel="canonical" href="https://workzap.co/pricing" />
+    </Helmet>
     <Header />
     <section className="pt-32 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">

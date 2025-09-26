@@ -19,6 +19,7 @@ import { IndustrySolutionsPage } from "./pages/IndustrySolutionsPage";
 import { CareersPage } from "./pages/CareersPage";
 import { CaseStudyPage } from "./pages/CaseStudyPage";
 import { PricingPage } from "./pages/PricingPage";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   React.useEffect(() => {
@@ -52,6 +53,16 @@ const Home = () => {
   }, []);
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Workzap — Premium Virtual Assistant Platform</title>
+        <meta name="description" content="Hire vetted virtual assistants, enable EoR for global compliance, and automate operations. Transparent pricing and real case studies." />
+        <link rel="canonical" href="https://workzap.co/" />
+        <meta property="og:title" content="Workzap — Premium Virtual Assistant Platform" />
+        <meta property="og:description" content="Hire vetted virtual assistants, enable EoR for global compliance, and automate operations. Transparent pricing and real case studies." />
+        <meta property="og:url" content="https://workzap.co/" />
+        <meta name="twitter:title" content="Workzap — Premium Virtual Assistant Platform" />
+        <meta name="twitter:description" content="Hire vetted VAs with EoR and automation support. See pricing and book a call today." />
+      </Helmet>
       <Header />
       <main>
         <Hero />
@@ -70,6 +81,11 @@ const Home = () => {
 // Simple placeholder pages
 const Privacy = () => (
   <div className="min-h-screen bg-white pt-32 pb-20">
+    <Helmet>
+      <title>Privacy Policy — Workzap</title>
+      <meta name="description" content="Read Workzap's privacy policy to learn how we collect, use, and protect your personal information." />
+      <link rel="canonical" href="https://workzap.co/privacy" />
+    </Helmet>
     <Header />
     <div className="max-w-4xl mx-auto px-6">
       <h1 className="font-bebas text-4xl text-workzap-black mb-6">Privacy Policy</h1>
@@ -101,6 +117,11 @@ const Privacy = () => (
 
 const Terms = () => (
   <div className="min-h-screen bg-white pt-32 pb-20">
+    <Helmet>
+      <title>Terms of Service — Workzap</title>
+      <meta name="description" content="Review Workzap's terms of service governing use of our virtual assistant platform and services." />
+      <link rel="canonical" href="https://workzap.co/terms" />
+    </Helmet>
     <Header />
     <div className="max-w-4xl mx-auto px-6">
       <h1 className="font-bebas text-4xl text-workzap-black mb-6">Terms of Service</h1>

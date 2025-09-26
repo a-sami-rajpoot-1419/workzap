@@ -1,5 +1,6 @@
 // No import of scrollToCalendly
 import { Header } from '../components/Header';
+import { Helmet } from 'react-helmet-async';
 import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -19,6 +20,11 @@ const EoRPage = () => {
   };
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Employer of Record (EoR) — Workzap</title>
+        <meta name="description" content="Workzap EoR handles legal employment, payroll, taxes, and benefits for global hires. Hire compliantly without setting up entities." />
+        <link rel="canonical" href="https://workzap.co/eor" />
+      </Helmet>
       <Header />
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-white">

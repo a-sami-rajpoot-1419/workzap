@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { scrollToCalendly } from '../lib/scrollToCalendly';
@@ -180,6 +181,11 @@ export const CaseStudyPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>{`${caseStudy.title} — ${caseStudy.industry} Case Study | Workzap`}</title>
+        <meta name="description" content={`See how Workzap delivered results in ${caseStudy.industry}: ${caseStudy.results}`} />
+        <link rel="canonical" href={`https://workzap.co/industry-solutions/${(caseStudy.industry || '').toLowerCase()}/${(caseStudy.title || '').toLowerCase().replace(/\s+/g, '-')}`} />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}

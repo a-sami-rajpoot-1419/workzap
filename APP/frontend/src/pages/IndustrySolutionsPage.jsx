@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Input } from '../components/ui/input';
@@ -75,6 +76,11 @@ export const IndustrySolutionsPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Industry Solutions & Case Studies — Workzap</title>
+        <meta name="description" content="Explore Workzap's real case studies by industry. See outcomes, tools, and workflows delivered by specialized virtual assistants." />
+        <link rel="canonical" href="https://workzap.co/industry-solutions" />
+      </Helmet>
       <Header />
       
       {/* Hero Bar */}

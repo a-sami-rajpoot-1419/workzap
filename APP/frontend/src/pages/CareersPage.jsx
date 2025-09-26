@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Card, CardContent } from '../components/ui/card';
@@ -60,6 +61,11 @@ export const CareersPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Careers — Join Workzap's Premium VA Network</title>
+        <meta name="description" content="Join Workzap as a top-tier Virtual Assistant. Flexible schedules, growth, and global clients. Apply to open roles." />
+        <link rel="canonical" href="https://workzap.co/careers" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
