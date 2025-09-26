@@ -16,6 +16,7 @@
 ## 📋 Table of Contents
 
 - [About The Project](#about-the-project)
+- [What the Website Does & Business Impact](#what-the-website-does--business-impact)
 - [Key Features](#key-features)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
@@ -43,6 +44,24 @@ Workzap is a premium virtual assistant platform that connects businesses with hi
 - **Creative Services**: Content creation, social media management, graphic design
 - **Technical Support**: Automation, AI integration, software management
 - **Specialized Roles**: Psychology support, industry-specific expertise
+
+## 🧩 What the Website Does & Business Impact
+
+This repository powers the Workzap marketing website and lead-generation funnel for premium Virtual Assistant (VA) services and Employer of Record (EOR) offerings. It showcases real case studies, testimonials, pricing plans, and role descriptions while enabling prospects to book discovery calls via Calendly.
+
+- What it does:
+   - Presents industry solutions (YouTube-nocookie embeds or static images) and detailed case studies
+   - Highlights client testimonials (two video iframes + one static image)
+   - Lists roles and pricing with clear CTAs to “Book a Call”
+   - Provides informational pages like EoR and Careers
+   - Runs as a secure, static React SPA with strict CSP and SPA rewrites
+
+- Business impact:
+   - Improves conversion with social proof (testimonials, case studies)
+   - Reduces sales friction via transparent pricing and role clarity
+   - Accelerates bookings with embedded Calendly
+   - Supports privacy-first embedding (nocookie) to reduce third‑party noise and build trust
+   - Demonstrates operational capabilities (automation, AI, support) that translate to time savings, lower overhead, and better SLAs for clients
 
 ## ✨ Key Features
 
@@ -135,13 +154,15 @@ Workzap is a premium virtual assistant platform that connects businesses with hi
 ### Quick Start Commands
 
 ```bash
-# Development
+# With Yarn
 yarn start          # Start dev server at localhost:3000
 yarn build          # Build for production
 yarn test           # Run test suite
 
-# Production
-yarn build          # Generate optimized build
+# With npm
+npm start           # Start dev server at localhost:3000
+npm run build       # Build for production
+npm test            # Run test suite
 ```
 
 ## 📁 Project Structure
@@ -242,12 +263,18 @@ npx vercel --prod
 
 ```json
 {
-  "buildCommand": "cd APP/frontend && yarn build",
-  "outputDirectory": "APP/frontend/build",
-  "installCommand": "cd APP/frontend && yarn install",
-  "framework": "create-react-app"
+   "version": 2,
+   "buildCommand": "cd APP/frontend && npm install --legacy-peer-deps && npm run build",
+   "outputDirectory": "APP/frontend/build",
+   "installCommand": "cd APP/frontend && npm install --legacy-peer-deps",
+   "framework": null,
+   "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
+   ]
 }
 ```
+
+SPA routing is handled by rewriting all requests to `index.html`, ensuring client-side routes work on refresh and direct navigation.
 
 ### Environment Setup
 
