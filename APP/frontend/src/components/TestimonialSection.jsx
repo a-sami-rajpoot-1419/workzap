@@ -99,11 +99,12 @@ export const TestimonialsSection = () => {
                     />
                   </div>
                 ) : (
-                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src={testimonial.poster}
                       alt={`${testimonial.name} from ${testimonial.company}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-auto object-contain"
+                      loading="lazy"
                     />
                   </div>
                 )}

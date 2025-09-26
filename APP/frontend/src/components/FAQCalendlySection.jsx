@@ -90,6 +90,8 @@ export const FAQCalendlySection = () => {
                 frameBorder="0"
                 title="Book a Discovery Call"
                 className="min-h-[600px]"
+                allow="payment"
+                allowPaymentRequest
               ></iframe>
             </div>
 

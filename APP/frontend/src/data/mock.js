@@ -192,7 +192,7 @@ export const mockData = {
       imageOnly: false,
       // Keep src for potential HTML5 video fallback; primary is YouTube embed
       src: "",
-      embedUrl: "https://www.youtube.com/embed/nRgmV0wy1rk",
+  embedUrl: "https://www.youtube-nocookie.com/embed/nRgmV0wy1rk",
       roles: ["automation-ai-expert"],
       tools: [
         "OpenAI",
