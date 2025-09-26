@@ -269,12 +269,12 @@ export const mockData = {
     },
     {
       id: 3,
-      name: "Emily Watson",
-      company: "Creative Agency",
+      name: "Voyla Baziuk",
+      company: "Orchid Therapy",
       rating: 5,
-      quote: "From customer support to social media management, our Workzap team feels like an extension of our own. Quality is consistently excellent.",
-      videoSrc: "/media/testimonial-emily.mp4", 
-      poster: "https://dummyimage.com/640x360/000000/ffd700&text=Emily+Watson+Testimonial"
+      quote: "Getting a psychologist via Workzap was the best decision! She gets ADHD and has helped me stay on track without feeling overwhelmed.",
+      videoSrc: "", 
+      poster: "/testimonial3.jpeg"
     }
   ],
 

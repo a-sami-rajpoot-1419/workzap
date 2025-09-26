@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from './ui/button';
-import { Play, Star, Phone } from 'lucide-react';
+import { Star, Phone } from 'lucide-react';
 import { mockData } from '../data/mock';
 export const TestimonialsSection = () => {
-  const [playingVideos, setPlayingVideos] = useState(new Set());
-
   const scrollToFAQ = () => {
     const faqSection = document.getElementById('faq-calendly');
     if (faqSection) {
       faqSection.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const handleVideoPlay = (testimonialId) => {
-    const newPlayingVideos = new Set(playingVideos);
-    newPlayingVideos.add(testimonialId);
-    setPlayingVideos(newPlayingVideos);
   };
 
   const renderStars = (rating) => {
@@ -80,7 +72,7 @@ export const TestimonialsSection = () => {
                 </Button>
               </div>
 
-              {/* Video: First and second testimonials render YouTube embeds */}
+              {/* Media: First and second testimonials render YouTube embeds; third renders a static image */}
               <div className={`relative ${index % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
                 {index === 0 ? (
                   <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -107,22 +99,12 @@ export const TestimonialsSection = () => {
                     />
                   </div>
                 ) : (
-                  <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300" style={{ display: 'none' }}>
+                  <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <img
                       src={testimonial.poster}
-                      alt={`${testimonial.name} testimonial video`}
+                      alt={`${testimonial.name} from ${testimonial.company}`}
                       className="w-full h-full object-cover"
                     />
-                    {!playingVideos.has(testimonial.id) && (
-                      <div 
-                        className="video-overlay"
-                        onClick={() => handleVideoPlay(testimonial.id)}
-                      >
-                        <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 hover:bg-white/30 transition-colors duration-300">
-                          <Play size={32} className="text-white ml-1" />
-                        </div>
-                      </div>
-                    )}
                   </div>
                 )}
               </div>
