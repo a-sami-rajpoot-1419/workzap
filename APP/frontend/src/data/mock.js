@@ -274,7 +274,7 @@ export const mockData = {
       rating: 5,
       quote: "Getting a psychologist via Workzap was the best decision! She gets ADHD and has helped me stay on track without feeling overwhelmed.",
       videoSrc: "", 
-      poster: "/testimonial3.jpeg"
+  poster: "/testimonial3.jpeg?v=2"
     }
   ],
 
