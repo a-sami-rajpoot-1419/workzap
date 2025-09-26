@@ -96,12 +96,15 @@ export const CareersPage = () => {
               </Button>
             </div>
 
-            {/* Hero video placeholder (empty box, no playback yet) */}
+            {/* Hero image next to text */}
             <div className="relative">
-              <div
-                className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-                aria-label="Video placeholder"
-              />
+              <div className="aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <img
+                  src="/role5.jpg"
+                  alt="Workzap VA at work"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <p className="text-center text-gray-600 mt-4">Day in the Life: Workzap VA</p>
             </div>
           </div>
