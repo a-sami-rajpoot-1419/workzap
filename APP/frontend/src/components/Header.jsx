@@ -56,7 +56,7 @@ export const Header = () => {
         <div className="flex items-center">
           <a href="/" aria-label="Go to Workzap home">
             <img
-              src="/Workzap-logo-white.png?v=2"
+              src="/logo-black.png?v=2"
               alt="Workzap Logo"
               className={`${isScrolled ? 'h-20' : 'h-24'} w-auto object-contain transition-all duration-300`}
             />
