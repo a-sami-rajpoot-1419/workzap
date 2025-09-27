@@ -131,26 +131,31 @@ const EoRPage = () => {
       {/* Compliance Details Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square mb-6 md:mb-0">
+          {/* Image 1 */}
+          <div className="order-1 md:order-1 rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square">
             <img src="/287_1.jpg" alt="Legal compliance" className="w-full h-full object-cover" loading="lazy" />
           </div>
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square mb-6 md:mb-0">
+          {/* Image 2 */}
+          <div className="order-3 md:order-2 rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square">
             <img src="/287_2.jpg" alt="Tax compliance" className="w-full h-full object-cover" loading="lazy" />
           </div>
-          <div className="rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square">
+          {/* Image 3 */}
+          <div className="order-5 md:order-3 rounded-xl overflow-hidden shadow-lg bg-gray-100 aspect-square">
             <img src="/287_3.jpg" alt="Benefits disbursement" className="w-full h-full object-cover" loading="lazy" />
           </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          <div>
+
+          {/* Text 1 */}
+          <div className="order-2 md:order-4">
             <h3 className="font-bebas text-xl text-workzap-black mb-2">Legal Compliance</h3>
             <p className="text-gray-700">Workzap ensures your hires are fully compliant with local labor laws and international regulations. We provide tailored contracts that safeguard both your company and employees while minimizing legal and financial risks.</p>
           </div>
-          <div>
+          {/* Text 2 */}
+          <div className="order-4 md:order-5">
             <h3 className="font-bebas text-xl text-workzap-black mb-2">Tax Compliance</h3>
             <p className="text-gray-700">Workzap manages accurate tax withholdings, ensuring full compliance with tax laws. As the employer, we handle all payroll taxes, filings, and timely payments, relieving you from the financial complexities of international employment.</p>
           </div>
-          <div>
+          {/* Text 3 */}
+          <div className="order-6 md:order-6">
             <h3 className="font-bebas text-xl text-workzap-black mb-2">Benefits Disbursement</h3>
             <p className="text-gray-700">Workzap administers comprehensive benefits, including health insurance for both employees and their parents, along with leave policies. Employees also receive bonuses and recurring bonuses, enhancing their overall compensation package.</p>
           </div>
