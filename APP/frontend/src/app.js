@@ -79,6 +79,8 @@ const Home = () => {
         <TestimonialsSection />
         <FAQCalendlySection />
       </main>
+      {/* Separator between FAQ and Footer */}
+      <div className="h-px bg-workzap-gold" aria-hidden="true"></div>
       <Footer />
       <StickyCTA />
     </div>
