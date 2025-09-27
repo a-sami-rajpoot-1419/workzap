@@ -104,6 +104,8 @@ export const CareersPage = () => {
             </Button>
           </div>
 
+          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h4 className="font-semibold text-workzap-black mb-4">Requirements</h4>
@@ -337,6 +339,98 @@ export const CareersPage = () => {
               </CardContent>
             </Card>
             {selectedRole?.id === 4 && (
+              <RoleDetailsPanel role={selectedRole} />
+            )}
+
+            {/* Human Resource Associate */}
+            <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
+              id: 10,
+              title: 'Human Resource Associate',
+              department: 'Human Resources',
+              location: 'Onsite',
+              type: 'Full-time',
+              experience: '6 months – 3 years',
+              description: 'Create HR systems, lead recruitment and onboarding, maintain records and compliance, and serve as HR point-of-contact in a fast-paced startup.',
+              requirements: [
+                '6 months–3 years HR experience',
+                "Solid knowledge of Pakistan labor laws and compliance",
+                'Ability to build HR policies and processes from scratch (without AI)',
+                'Experience hiring, onboarding, and managing onsite and remote teams',
+                'Handle employee relations, contracts, and conflict resolution',
+                'Comfortable in a startup environment with evolving processes'
+              ],
+              benefits: [
+                'Competitive salary (PKR 35,000–50,000 based on skills)',
+                'Full-time onsite role',
+                "Shape WorkZap’s HR function from the ground up",
+                'Fast-paced learning and growth',
+                'Work closely with leadership and clients'
+              ]
+            })}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <Badge variant="outline" className="border-workzap-gold text-workzap-gold">
+                    Human Resources
+                  </Badge>
+                  <Badge variant="secondary" className="bg-workzap-gold text-workzap-black">
+                    Full-time
+                  </Badge>
+                </div>
+
+                <h3 className="font-semibold text-xl text-workzap-black mb-3">
+                  Human Resource Associate
+                </h3>
+
+                <div className="space-y-2 mb-4 text-sm text-gray-600">
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={14} />
+                    <span>Onsite</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock size={14} />
+                    <span>6 months – 3 years experience</span>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                  Build HR systems, lead hiring and onboarding, maintain compliance, and be the HR point-of-contact in a growing startup.
+                </p>
+
+                <Button
+                  className="w-full bg-workzap-black text-white hover:bg-workzap-black-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedRole({
+                      id: 10,
+                      title: 'Human Resource Associate',
+                      department: 'Human Resources',
+                      location: 'Onsite',
+                      type: 'Full-time',
+                      experience: '6 months – 3 years',
+                      description: 'Create HR systems, lead recruitment and onboarding, maintain records and compliance, and serve as HR point-of-contact in a fast-paced startup.',
+                      requirements: [
+                        '6 months–3 years HR experience',
+                        "Solid knowledge of Pakistan labor laws and compliance",
+                        'Ability to build HR policies and processes from scratch (without AI)',
+                        'Experience hiring, onboarding, and managing onsite and remote teams',
+                        'Handle employee relations, contracts, and conflict resolution',
+                        'Comfortable in a startup environment with evolving processes'
+                      ],
+                      benefits: [
+                        'Competitive salary (PKR 35,000–50,000 based on skills)',
+                        'Full-time onsite role',
+                        "Shape WorkZap’s HR function from the ground up",
+                        'Fast-paced learning and growth',
+                        'Work closely with leadership and clients'
+                      ]
+                    });
+                  }}
+                >
+                  View Details
+                </Button>
+              </CardContent>
+            </Card>
+            {selectedRole?.id === 10 && (
               <RoleDetailsPanel role={selectedRole} />
             )}
 
