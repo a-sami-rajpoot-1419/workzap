@@ -2,6 +2,7 @@
 import { Header } from '../components/Header';
 import { Helmet } from 'react-helmet-async';
 import { Footer } from '../components/Footer';
+import { CalendlySection } from '../components/CalendlySection';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { Phone, ArrowLeft, Umbrella, Gem, UserPlus, LifeBuoy, FileCheck, HeartPulse } from 'lucide-react';
@@ -197,7 +198,9 @@ const EoRPage = () => {
         </div>
       </section>
 
-      <Footer />
+  {/* Calendly section before footer */}
+  <CalendlySection id="faq-calendly" />
+  <Footer />
     </div>
   );
 };

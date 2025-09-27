@@ -19,7 +19,10 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-workzap-black text-white py-16">
+    <>
+      {/* Global separator above footer */}
+      <div className="h-px bg-workzap-gold" aria-hidden="true"></div>
+      <footer className="bg-workzap-black text-white py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo and Brand */}
@@ -124,5 +127,6 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
