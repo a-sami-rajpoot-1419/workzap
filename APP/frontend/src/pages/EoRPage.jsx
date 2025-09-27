@@ -24,6 +24,15 @@ const EoRPage = () => {
         <title>Employer of Record (EoR) — Workzap</title>
         <meta name="description" content="Workzap EoR handles legal employment, payroll, taxes, and benefits for global hires. Hire compliantly without setting up entities." />
         <link rel="canonical" href="https://workzap.co/eor" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Employer of Record (EoR) — Workzap" />
+        <meta property="og:description" content="Hire globally with confidence. Workzap EoR manages compliance, payroll, and benefits." />
+        <meta property="og:url" content="https://workzap.co/eor" />
+        <meta property="og:image" content="https://workzap.co/Workzap-logo-white.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Employer of Record (EoR) — Workzap" />
+        <meta name="twitter:description" content="Hire globally with confidence. EoR managed by Workzap." />
+        <meta name="twitter:image" content="https://workzap.co/Workzap-logo-white.png" />
       </Helmet>
       <Header />
       {/* Hero Section */}

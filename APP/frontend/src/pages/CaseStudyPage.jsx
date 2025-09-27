@@ -185,6 +185,15 @@ export const CaseStudyPage = () => {
         <title>{`${caseStudy.title} — ${caseStudy.industry} Case Study | Workzap`}</title>
         <meta name="description" content={`See how Workzap delivered results in ${caseStudy.industry}: ${caseStudy.results}`} />
         <link rel="canonical" href={`https://workzap.co/industry-solutions/${(caseStudy.industry || '').toLowerCase()}/${(caseStudy.title || '').toLowerCase().replace(/\s+/g, '-')}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${caseStudy.title} — ${caseStudy.industry} Case Study | Workzap`} />
+        <meta property="og:description" content={`See how Workzap delivered results in ${caseStudy.industry}.`} />
+        <meta property="og:url" content={`https://workzap.co/industry-solutions/${(caseStudy.industry || '').toLowerCase()}/${(caseStudy.title || '').toLowerCase().replace(/\s+/g, '-')}`} />
+        <meta property="og:image" content={`${(caseStudy.poster ? 'https://workzap.co' + caseStudy.poster : 'https://workzap.co/Workzap-logo-white.png')}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${caseStudy.title} — ${caseStudy.industry} Case Study | Workzap`} />
+        <meta name="twitter:description" content={`See how Workzap delivered results in ${caseStudy.industry}.`} />
+        <meta name="twitter:image" content={`${(caseStudy.poster ? 'https://workzap.co' + caseStudy.poster : 'https://workzap.co/Workzap-logo-white.png')}`} />
       </Helmet>
       <Header />
       

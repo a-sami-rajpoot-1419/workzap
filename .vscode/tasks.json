@@ -132,6 +132,48 @@
 			"command": "cd APP/frontend; npm run build",
 			"isBackground": false,
 			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Generate Sitemap",
+			"type": "shell",
+			"command": "cd APP/frontend; node sitemap-generator.js",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Regenerate Sitemap",
+			"type": "shell",
+			"command": "cd APP/frontend; node sitemap-generator.js",
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Build Frontend (PowerShell)",
+			"type": "shell",
+			"command": "cd APP/frontend; npm run build",
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }

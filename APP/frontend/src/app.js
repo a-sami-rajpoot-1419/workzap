@@ -57,11 +57,18 @@ const Home = () => {
         <title>Workzap — Premium Virtual Assistant Platform</title>
         <meta name="description" content="Hire vetted virtual assistants, enable EoR for global compliance, and automate operations. Transparent pricing and real case studies." />
         <link rel="canonical" href="https://workzap.co/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Workzap" />
         <meta property="og:title" content="Workzap — Premium Virtual Assistant Platform" />
         <meta property="og:description" content="Hire vetted virtual assistants, enable EoR for global compliance, and automate operations. Transparent pricing and real case studies." />
         <meta property="og:url" content="https://workzap.co/" />
+        <meta property="og:image" content="https://workzap.co/Workzap-logo-white.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Workzap — Premium Virtual Assistant Platform" />
         <meta name="twitter:description" content="Hire vetted VAs with EoR and automation support. See pricing and book a call today." />
+        <meta name="twitter:image" content="https://workzap.co/Workzap-logo-white.png" />
       </Helmet>
       <Header />
       <main>

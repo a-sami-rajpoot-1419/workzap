@@ -80,6 +80,15 @@ export const IndustrySolutionsPage = () => {
         <title>Industry Solutions & Case Studies — Workzap</title>
         <meta name="description" content="Explore Workzap's real case studies by industry. See outcomes, tools, and workflows delivered by specialized virtual assistants." />
         <link rel="canonical" href="https://workzap.co/industry-solutions" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Industry Solutions & Case Studies — Workzap" />
+        <meta property="og:description" content="Explore real case studies by industry. Outcomes, tools, and workflows delivered by Workzap VAs." />
+        <meta property="og:url" content="https://workzap.co/industry-solutions" />
+        <meta property="og:image" content="https://workzap.co/Workzap-logo-white.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Industry Solutions — Workzap" />
+        <meta name="twitter:description" content="Explore real case studies by industry delivered by Workzap VAs." />
+        <meta name="twitter:image" content="https://workzap.co/Workzap-logo-white.png" />
       </Helmet>
       <Header />
       

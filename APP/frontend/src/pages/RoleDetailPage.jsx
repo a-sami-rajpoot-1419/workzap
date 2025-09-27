@@ -48,6 +48,15 @@ export const RoleDetailPage = () => {
         <title>{`${role.title} — Virtual Assistant Role | Workzap`}</title>
         <meta name="description" content={role.fullDesc} />
         <link rel="canonical" href={`https://workzap.co/roles/${role.slug}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${role.title} — Virtual Assistant Role | Workzap`} />
+        <meta property="og:description" content={role.fullDesc} />
+        <meta property="og:url" content={`https://workzap.co/roles/${role.slug}`} />
+        <meta property="og:image" content={`https://workzap.co${role.frontImage || '/Workzap-logo-white.png'}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${role.title} — Virtual Assistant Role | Workzap`} />
+        <meta name="twitter:description" content={role.fullDesc} />
+        <meta name="twitter:image" content={`https://workzap.co${role.frontImage || '/Workzap-logo-white.png'}`} />
       </Helmet>
       <Header />
       

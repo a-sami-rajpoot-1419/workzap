@@ -21,7 +21,17 @@ export const PricingPage = () => (
     <Helmet>
       <title>Pricing & Plans — Workzap Virtual Assistants</title>
       <meta name="description" content="Simple, flexible pricing for premium virtual assistants. Lock your rate, scale up or down, and pay $0 until you hire." />
+      <meta name="keywords" content="virtual assistant pricing, VA hourly rates, remote assistant cost, dedicated assistant, part-time virtual assistant, startup virtual assistant, offshore VA, WorkZap pricing, hire virtual assistant, flexible VA plans" />
       <link rel="canonical" href="https://workzap.co/pricing" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Pricing & Plans — Workzap Virtual Assistants" />
+      <meta property="og:description" content="Simple, flexible pricing for premium virtual assistants. Lock your rate, scale up or down." />
+      <meta property="og:url" content="https://workzap.co/pricing" />
+      <meta property="og:image" content="https://workzap.co/Workzap-logo-white.png" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Pricing & Plans — Workzap" />
+      <meta name="twitter:description" content="Simple, flexible pricing for premium virtual assistants." />
+      <meta name="twitter:image" content="https://workzap.co/Workzap-logo-white.png" />
     </Helmet>
     <Header />
     <section className="pt-32 pb-20 bg-white">
@@ -43,64 +53,57 @@ export const PricingPage = () => (
           WorkZap gives you highly-trained, reliable VAs who scale with you. Whether you’re a solo founder, a fast-growing startup, or an established business, our pricing is simple, flexible, and built to deliver ROI from day one.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-        <div className="bg-workzap-black rounded-lg p-8 text-white border-2 border-workzap-gold shadow-gold">
-          <h2 className="font-bebas text-3xl mb-4 text-workzap-gold">Why WorkZap’s Pricing Works for You</h2>
-          <ul className="list-disc list-inside text-lg text-gray-200 space-y-2">
-            <li>Transparent hourly rates – no hidden fees.</li>
-            <li>Start risk-free – only pay when you hire.</li>
-            <li>Scale up or down anytime – add or reduce hours as your workload changes.</li>
-            <li>Backup VA guarantee – your business never skips a beat.</li>
-          </ul>
-        </div>
-        <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold">
-          <h2 className="font-bebas text-3xl mb-4 text-workzap-black">Lock Your Rate Today</h2>
-          <p className="text-lg text-gray-700 mb-2">Start this week at <span className="font-bold text-workzap-gold">$16/hr</span>. Next week, new clients pay <span className="font-bold text-workzap-gold">$18/hr</span>. Act fast to secure the best rate.</p>
-        </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-        <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold">
-          <h2 className="font-bebas text-2xl mb-2 text-workzap-black">Subscription Plans</h2>
-          <div className="mb-6">
-            <h3 className="font-bebas text-xl text-workzap-black mb-1">Full-Time Assistant</h3>
-            <ul className="list-disc list-inside text-gray-700 text-base mb-2">
-              <li>40 hrs/week of dedicated support</li>
-              <li>$16 per hour (≈ $2,560/mo)</li>
-              <li>Perfect for founders, executives, and busy teams who need consistent coverage.</li>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-10 mb-16">
+          <div className="bg-workzap-black rounded-lg p-8 text-white border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
+            <h2 className="font-bebas text-2xl text-workzap-gold">Why WorkZap’s Pricing Works for You</h2>
+            <ul className="list-disc list-inside text-base text-gray-200 space-y-1 leading-relaxed">
+              <li>Transparent hourly rates — no hidden fees.</li>
+              <li>Risk‑free start — only pay when you hire.</li>
+              <li>Scale anytime with a backup VA guarantee.</li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-bebas text-xl text-workzap-black mb-1">Part-Time Assistant</h3>
-            <ul className="list-disc list-inside text-gray-700 text-base mb-2">
-              <li>20 hrs/week of dedicated support</li>
-              <li>$18 per hour (≈ $1,440/mo)</li>
-              <li>Great for startups, agencies, or solopreneurs who want reliable support without the full-time spend.</li>
+          <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
+            <h2 className="font-bebas text-2xl text-workzap-black">Lock Your Rate Today</h2>
+            <ul className="list-disc list-inside text-base text-gray-700 space-y-1 leading-relaxed">
+              <li>Start this week at <span className="font-bold text-workzap-gold">$16/hr</span>.</li>
+              <li>Next week, new clients pay <span className="font-bold text-workzap-gold">$18/hr</span>.</li>
+              <li>Secure your best rate now — limited time.</li>
             </ul>
           </div>
         </div>
-        <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold">
-          <h2 className="font-bebas text-2xl mb-2 text-workzap-black">Scale Up with Add-Ons</h2>
-          <ul className="list-disc list-inside text-gray-700 text-base mb-2">
-            <li>Specialized VA Skills: Add Marketing, Psychologist, Content & Graphic Associate, or Customer Support (+$2/hr).</li>
-            <li>Priority Coverage: Weekend + after-hours support (+$199/mo).</li>
-            <li>System Setup Package: Done-for-you setup of ClickUp, HubSpot, or GHL (+$499 one-time).</li>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-10 mb-16">
+          <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
+            <h2 className="font-bebas text-2xl text-workzap-black">Subscription Plans</h2>
+            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+              <li>Full‑Time: 40 hrs/week at $16/hr (≈ $2,560/mo).</li>
+              <li>Part‑Time: 20 hrs/week at $18/hr (≈ $1,440/mo).</li>
+              <li>Best for founders and teams needing dedicated, reliable support.</li>
+            </ul>
+          </div>
+          <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
+            <h2 className="font-bebas text-2xl text-workzap-black">Scale Up with Add-Ons</h2>
+            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+              <li>Specialized skills: Marketing, Content/Design, Customer Support (+$2/hr).</li>
+              <li>Priority coverage: Weekends + after‑hours (+$199/mo).</li>
+              <li>System setup: ClickUp, HubSpot, or GHL (+$499 one‑time).</li>
           </ul>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-        <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold">
-          <h2 className="font-bebas text-2xl mb-2 text-workzap-black">Not Ready Yet?</h2>
-          <ul className="list-disc list-inside text-gray-700 text-base mb-2">
-            <li>Project Pack: 20 hours, flat $399. No ongoing contract.</li>
-            <li>Shared Assistant: Just 10 hrs/week at $20/hr. Designed for solo founders testing the waters.</li>
-          </ul>
-        </div>
-        <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold">
-          <h2 className="font-bebas text-2xl mb-2 text-workzap-black">Stay for the Long Run</h2>
-          <ul className="list-disc list-inside text-gray-700 text-base mb-2">
-            <li>Annual Commit & Save: Pay 12 months upfront, get 2 months free + rate lock.</li>
-            <li>Backup VA Guarantee: Stay 6+ months, we’ll train a backup VA at no cost so you’re never left hanging.</li>
-            <li>Direct Placement Option: Convert your VA into a direct employee for a one-time placement fee.</li>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-10 mb-16">
+          <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
+            <h2 className="font-bebas text-2xl text-workzap-black">Not Ready Yet?</h2>
+            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+              <li>Project Pack: 20 hours for $399 flat.</li>
+              <li>Shared Assistant: 10 hrs/week at $20/hr.</li>
+              <li>No commitment — start small, scale as needed.</li>
+            </ul>
+          </div>
+          <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
+            <h2 className="font-bebas text-2xl text-workzap-black">Stay for the Long Run</h2>
+            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+              <li>Annual Commit & Save: Pay 12 months, get 2 free + rate lock.</li>
+              <li>Backup VA included after 6+ months.</li>
+              <li>Direct placement available (one‑time fee).</li>
           </ul>
         </div>
       </div>
