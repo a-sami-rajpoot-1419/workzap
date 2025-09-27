@@ -56,7 +56,7 @@ export const PricingPage = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-10 mb-16">
           <div className="bg-workzap-black rounded-lg p-8 text-white border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
             <h2 className="font-bebas text-2xl text-workzap-gold">Why WorkZap’s Pricing Works for You</h2>
-            <ul className="list-disc list-inside text-base text-gray-200 space-y-1 leading-relaxed">
+            <ul className="list-disc list-outside pl-5 text-base text-gray-200 space-y-1 leading-relaxed">
               <li>Transparent hourly rates — no hidden fees.</li>
               <li>Risk‑free start — only pay when you hire.</li>
               <li>Scale anytime with a backup VA guarantee.</li>
@@ -64,7 +64,7 @@ export const PricingPage = () => (
           </div>
           <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
             <h2 className="font-bebas text-2xl text-workzap-black">Lock Your Rate Today</h2>
-            <ul className="list-disc list-inside text-base text-gray-700 space-y-1 leading-relaxed">
+            <ul className="list-disc list-outside pl-5 text-base text-gray-700 space-y-1 leading-relaxed">
               <li>Start this week at <span className="font-bold text-workzap-gold">$16/hr</span>.</li>
               <li>Next week, new clients pay <span className="font-bold text-workzap-gold">$18/hr</span>.</li>
               <li>Secure your best rate now — limited time.</li>
@@ -74,7 +74,7 @@ export const PricingPage = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-10 mb-16">
           <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
             <h2 className="font-bebas text-2xl text-workzap-black">Subscription Plans</h2>
-            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+            <ul className="list-disc list-outside pl-5 text-gray-700 text-base space-y-1 leading-relaxed">
               <li>Full‑Time: 40 hrs/week at $16/hr (≈ $2,560/mo).</li>
               <li>Part‑Time: 20 hrs/week at $18/hr (≈ $1,440/mo).</li>
               <li>Best for founders and teams needing dedicated, reliable support.</li>
@@ -82,7 +82,7 @@ export const PricingPage = () => (
           </div>
           <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
             <h2 className="font-bebas text-2xl text-workzap-black">Scale Up with Add-Ons</h2>
-            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+            <ul className="list-disc list-outside pl-5 text-gray-700 text-base space-y-1 leading-relaxed">
               <li>Specialized skills: Marketing, Content/Design, Customer Support (+$2/hr).</li>
               <li>Priority coverage: Weekends + after‑hours (+$199/mo).</li>
               <li>System setup: ClickUp, HubSpot, or GHL (+$499 one‑time).</li>
@@ -92,7 +92,7 @@ export const PricingPage = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-10 mb-16">
           <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
             <h2 className="font-bebas text-2xl text-workzap-black">Not Ready Yet?</h2>
-            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+            <ul className="list-disc list-outside pl-5 text-gray-700 text-base space-y-1 leading-relaxed">
               <li>Project Pack: 20 hours for $399 flat.</li>
               <li>Shared Assistant: 10 hrs/week at $20/hr.</li>
               <li>No commitment — start small, scale as needed.</li>
@@ -100,7 +100,7 @@ export const PricingPage = () => (
           </div>
           <div className="bg-white rounded-lg p-8 border-2 border-workzap-gold shadow-gold h-full flex flex-col gap-4">
             <h2 className="font-bebas text-2xl text-workzap-black">Stay for the Long Run</h2>
-            <ul className="list-disc list-inside text-gray-700 text-base space-y-1 leading-relaxed">
+            <ul className="list-disc list-outside pl-5 text-gray-700 text-base space-y-1 leading-relaxed">
               <li>Annual Commit & Save: Pay 12 months, get 2 free + rate lock.</li>
               <li>Backup VA included after 6+ months.</li>
               <li>Direct placement available (one‑time fee).</li>
