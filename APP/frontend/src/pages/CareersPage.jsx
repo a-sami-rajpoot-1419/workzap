@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -10,6 +10,7 @@ import { StickyCTA } from '../components/StickyCTA';
 
 export const CareersPage = () => {
   const [selectedRole, setSelectedRole] = useState(null);
+  const detailsRef = useRef(null);
   const APPLICATION_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdrcym_ByL0ZIxkeFXr4YjJIvErN42MuzFKHaXjl8FkjPQR4Q/viewform?usp=header';
 
   // Smooth scroll to Open Positions section
@@ -58,6 +59,91 @@ export const CareersPage = () => {
       answer: 'Every VA has access to a dedicated success manager, peer community, and escalation support for challenging situations.'
     }
   ];
+
+  // Auto-scroll opened details into view
+  useEffect(() => {
+    if (selectedRole && detailsRef.current) {
+      try {
+        detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (_) {
+        // no-op
+      }
+    }
+  }, [selectedRole]);
+
+  const RoleDetailsPanel = ({ role }) => {
+    if (!role) return null;
+    return (
+      <div
+        ref={detailsRef}
+        className="col-span-1 md:col-span-2 lg:col-span-3 -mx-6 md:mx-0 mt-2"
+      >
+        <div className="bg-gray-50 rounded-none md:rounded-lg p-6 md:p-8 border-t md:border md:border-gray-200">
+          <div className="flex justify-between items-start mb-6">
+            <div>
+              <h3 className="font-bebas text-2xl md:text-3xl text-workzap-black mb-2">
+                {role.title}
+              </h3>
+              <div className="flex flex-wrap gap-3 text-sm text-gray-600">
+                <span className="flex items-center space-x-1">
+                  <MapPin size={14} />
+                  <span>{role.location}</span>
+                </span>
+                <span className="flex items-center space-x-1">
+                  <Clock size={14} />
+                  <span>{role.type}</span>
+                </span>
+              </div>
+            </div>
+            <Button
+              variant="outline"
+              onClick={() => setSelectedRole(null)}
+              size="sm"
+            >
+              Close
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="font-semibold text-workzap-black mb-4">Requirements</h4>
+              <ul className="space-y-2">
+                {role.requirements.map((req, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-workzap-gold rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">{req}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-workzap-black mb-4">Benefits</h4>
+              <ul className="space-y-2">
+                {role.benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-workzap-gold rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Button
+              size="lg"
+              onClick={() => window.open(APPLICATION_FORM_URL, '_blank', 'noopener,noreferrer')}
+              className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow"
+            >
+              <ExternalLink size={16} className="mr-2" />
+              Apply for This Role
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -250,6 +336,9 @@ export const CareersPage = () => {
                 </Button>
               </CardContent>
             </Card>
+            {selectedRole?.id === 4 && (
+              <RoleDetailsPanel role={selectedRole} />
+            )}
 
             {/* Psychologist */}
             <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
@@ -333,6 +422,9 @@ export const CareersPage = () => {
                 </Button>
               </CardContent>
             </Card>
+            {selectedRole?.id === 5 && (
+              <RoleDetailsPanel role={selectedRole} />
+            )}
 
             {/* Content & Graphic Associate */}
             <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
@@ -416,6 +508,9 @@ export const CareersPage = () => {
                 </Button>
               </CardContent>
             </Card>
+            {selectedRole?.id === 6 && (
+              <RoleDetailsPanel role={selectedRole} />
+            )}
 
             {/* Executive Assistant */}
             <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
@@ -499,6 +594,9 @@ export const CareersPage = () => {
                 </Button>
               </CardContent>
             </Card>
+            {selectedRole?.id === 7 && (
+              <RoleDetailsPanel role={selectedRole} />
+            )}
 
             {/* Marketing Expert */}
             <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
@@ -582,6 +680,9 @@ export const CareersPage = () => {
                 </Button>
               </CardContent>
             </Card>
+            {selectedRole?.id === 8 && (
+              <RoleDetailsPanel role={selectedRole} />
+            )}
 
             {/* Customer Support */}
             <Card className="border-2 border-gray-200 hover:border-workzap-gold transition-colors duration-300 cursor-pointer" onClick={() => setSelectedRole({
@@ -665,6 +766,9 @@ export const CareersPage = () => {
                 </Button>
               </CardContent>
             </Card>
+            {selectedRole?.id === 9 && (
+              <RoleDetailsPanel role={selectedRole} />
+            )}
           </div>
 
           {/* Start Your Application Button - Moved from FAQ section */}
@@ -678,72 +782,6 @@ export const CareersPage = () => {
               Start Your Application
             </Button>
           </div>
-          {/* Role Detail Modal/Section */}
-          {selectedRole && (
-            <div className="mt-16 bg-gray-50 rounded-lg p-8">
-              <div className="flex justify-between items-start mb-6">
-                <div>
-                  <h3 className="font-bebas text-3xl text-workzap-black mb-2">
-                    {selectedRole.title}
-                  </h3>
-                  <div className="flex flex-wrap gap-3 text-sm text-gray-600">
-                    <span className="flex items-center space-x-1">
-                      <MapPin size={14} />
-                      <span>{selectedRole.location}</span>
-                    </span>
-                    <span className="flex items-center space-x-1">
-                      <Clock size={14} />
-                      <span>{selectedRole.type}</span>
-                    </span>
-                  </div>
-                </div>
-                <Button
-                  variant="outline"
-                  onClick={() => setSelectedRole(null)}
-                  size="sm"
-                >
-                  Close
-                </Button>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-semibold text-workzap-black mb-4">Requirements</h4>
-                  <ul className="space-y-2">
-                    {selectedRole.requirements.map((req, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-workzap-gold rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700">{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-workzap-black mb-4">Benefits</h4>
-                  <ul className="space-y-2">
-                    {selectedRole.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-workzap-gold rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-8 text-center">
-                <Button
-                  size="lg"
-                  onClick={() => window.open(APPLICATION_FORM_URL, '_blank', 'noopener,noreferrer')}
-                  className="bg-workzap-gold text-workzap-black hover:bg-workzap-yellow"
-                >
-                  <ExternalLink size={16} className="mr-2" />
-                  Apply for This Role
-                </Button>
-              </div>
-            </div>
-          )}
         </div>
       </section>
 
